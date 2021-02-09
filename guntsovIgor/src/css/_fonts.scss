@@ -1,0 +1,7 @@
+@include fontFace($defaultFont, "normal", 400, "../fonts/open-sans-v18-latin-regular");
+
+@include fontFace($secondaryFont, "normal", 300, "../fonts/GothamBook");
+
+@include fontFace($secondaryFont, "normal", 400, "../fonts/gotham-medium-webfont");
+
+@include fontFace($secondaryFont, "normal", 700, "../fonts/gothambold1");

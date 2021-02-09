@@ -1,0 +1,65 @@
+.news {
+    background: url("../images/bg2.png") no-repeat;
+    background-size: cover;
+    height: 1035px;
+
+    &__title {
+        font-size: 44px;
+        color: $headerColor;
+        padding-top: 175px;
+        margin-bottom: 100px;
+        text-transform: uppercase;
+        text-align: center;
+        position: relative;
+        font-family: $secondaryMainFont;
+
+        &:before {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 1px;
+            background-color: $headerColor;
+            top: 135px;
+            left: 45%;
+        }
+    }
+
+    &__description {
+        padding: 30px 20px;
+    }
+
+    &__item {
+        max-width: 370px;
+        background-color: $headerColor;
+
+        &-title {
+            font-size: 22px;
+            color: $textColor;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            font-family: $secondaryMainFont;
+        }
+    }
+
+    &__text {
+        font-size: 18px;
+        color: $textColor;
+        margin-bottom: 35px;
+        color: #4b5562;
+        font-family: $mainFont;
+    }
+
+    &__author-name {
+        color: $textColor;
+        text-transform: uppercase;
+    }
+
+    &__author-image {
+        display: inline-block;
+    }
+
+    &__date {
+        color: #55b7ff;
+    }
+}
