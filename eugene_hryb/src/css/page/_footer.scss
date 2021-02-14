@@ -1,0 +1,18 @@
+.footer {
+    &__bg{
+        @include bgCover('../image/footer-bg.jpg');
+    }
+
+    &__wrapp{
+        padding: 0 0 180px 0;
+    }
+
+    &__logo{
+        padding-top: 10px;
+        padding-left: 5px;
+    }
+
+    &__social-list{
+        padding-bottom: 46px;
+    }
+}

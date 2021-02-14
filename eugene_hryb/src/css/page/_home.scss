@@ -1,0 +1,125 @@
+.home{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__bg{
+        @include bgCover('../image/homeBg.png');
+        position: relative;
+    }
+
+    &__wrapper {
+        display: flex;
+        flex-direction: column;
+        padding-top: 37px;
+        padding-bottom: 35px;
+        height: 100vh;
+    }
+
+    & .slick-dots{
+        position: absolute;
+        width: 30px;
+        top: 0;
+        right: calc(590px - 50vw);
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+
+        & > li {
+            margin-bottom: 40px;
+            border-radius: 1px solid $homeFontColor;
+            border-radius: 50%;
+
+            position: relative;
+
+            button{
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background-color: transparent;
+                color: transparent;
+                outline: none;
+                border: none;
+                cursor: pointer;
+            }
+
+            &::before{
+                content: '';
+                position: absolute;
+                width: 9px;
+                height: 9px;
+                top: 50%;
+                left: 50%;
+                border: solid 1px $homeFontColor;
+                border-radius: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        & > .slick-active{
+            &::before{
+                background-color: $homeFontColor;
+            }
+        }
+    }
+
+    &__slider-item{
+        text-align: center;
+        color: $homeFontColor;
+        text-transform: uppercase;
+        font-family: $firstFont;
+    }
+
+    &__item-title{
+        font-size: 80px;
+        font-weight: 700;
+        letter-spacing: 8px;
+        padding: 33px 0;
+    }
+
+    &__item-content{
+        font-size: 18px;
+        font-weight: 400;
+        letter-spacing: 6.8px;
+    }
+
+    &__next{
+        position: relative;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        animation: bounce 2s infinite ease-in-out;
+    }
+
+    &__next-link{
+        opacity: .7;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid $homeFontColor;
+        border-radius: 50%;
+    }
+
+    @keyframes bounce {
+        from,
+        to {
+            top: 0;
+        }
+
+        40%,
+        60% {
+            top: -20px;
+        }
+    }
+
+    &__next-img{
+        display: block;
+        height: 16px;
+    }
+}
