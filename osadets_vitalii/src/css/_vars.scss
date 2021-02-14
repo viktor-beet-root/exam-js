@@ -1,0 +1,23 @@
+$defaultFont: "Gotham";
+$secondaryFont: "OpenSans";
+
+$fallback: Arial, Helvetica, sans-serif;
+
+$mainFont: $defaultFont, $fallback;
+$secondaryFont: $secondaryFont, $fallback;
+
+$defaultFontSize: 14px;
+
+/*breakpoints */
+//размер XL
+$XL: 1260px;
+$XL_width: 960px;
+//размер LG
+$LG: 992px;
+$LG_width: 720px;
+//размер MD
+$MD: 768px;
+$MD_width: 540px;
+//размер SM
+$SM: 576px;
+$SM_width: 100%;

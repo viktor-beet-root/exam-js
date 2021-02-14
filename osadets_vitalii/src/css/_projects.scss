@@ -1,0 +1,129 @@
+.projects {
+	max-width: 1600px;
+	margin: 0 auto;
+	position: relative;
+	&__bg_one {
+		position: absolute;
+		width: 585px;
+		height: 470px;
+		top: 18%;
+		left: 0;
+		background: #55b7ff;
+		z-index: 0;
+		@media screen and (max-width: $LG) {
+			display: none;
+		}
+	}
+
+	&__bg_two {
+		position: absolute;
+		width: 585px;
+		height: 470px;
+		top: 59%;
+		right: 0%;
+		background: #7e5aff;
+		z-index: 0;
+		@media screen and (max-width: $LG) {
+			display: none;
+		}
+	}
+	&__item {
+		z-index: 1;
+		z-index: 1;
+	}
+	&__image {
+		max-width: 100%;
+	}
+
+	&__wrapper {
+		max-width: 1170px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+	}
+	&__header {
+		padding-top: 140px;
+		padding-bottom: 170px;
+	}
+	&__title {
+		color: #4b5562;
+		font-weight: 700;
+		text-transform: uppercase;
+		font-size: 44px;
+	}
+	&_headerPosition {
+		display: flex;
+		justify-content: center;
+		letter-spacing: 1.6;
+	}
+	&__list {
+		display: flex;
+		&:last-child {
+			padding-bottom: 140px;
+			padding-top: 200px;
+		}
+		@media screen and (max-width: $MD) {
+			flex-direction: column;
+		}
+	}
+	&__content {
+		display: flex;
+		flex-direction: column;
+		padding-top: 60px;
+		&:last-child {
+			padding-left: 60px;
+		}
+		&:first-child {
+			padding-right: 60px;
+			@media screen and (max-width: $MD) {
+				padding-right: 0;
+				padding-left: 60px;
+			}
+		}
+	}
+	&__subtitle {
+		color: #2c4058;
+		font-size: 22px;
+		text-transform: uppercase;
+		padding-bottom: 20px;
+	}
+	&__text {
+		color: #7b818a;
+		font-family: $secondaryFont;
+		font-size: 18px;
+		padding-top: 40px;
+		max-width: 460px;
+	}
+	&__button {
+		margin-top: 40px;
+		margin-bottom: 60px;
+	}
+	&__info {
+		position: relative;
+	}
+	&__pin {
+		position: absolute;
+		top: 0;
+		left: 0;
+		border-radius: 50%;
+		border: 3px solid #2c4058;
+		width: 6px;
+		height: 6px;
+		&:after {
+			position: absolute;
+			content: "";
+			width: 0px;
+			height: 0px;
+			bottom: -15px;
+			left: -2px;
+			border: 5px solid transparent;
+			border-top: 10px solid #2c4058;
+		}
+	}
+	&__address {
+		color: #2c4058;
+		font-size: 18px;
+		font-style: italic;
+		padding-left: 20px;
+	}
+}

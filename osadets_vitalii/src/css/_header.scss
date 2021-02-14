@@ -1,0 +1,214 @@
+input[type="radio"] {
+	margin-right: 10px;
+}
+
+.menu {
+	@include bgCover("../image/header.jpg");
+	height: 100vh;
+	max-width: 1600px;
+	position: relative;
+	min-height: 800px;
+
+	&__wrapper {
+		max-width: 1170px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__header {
+		min-height: 150px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
+.nav {
+	&__menu {
+		display: flex;
+		@media screen and (max-width: $LG) {
+			display: none;
+		}
+	}
+	&__item {
+		text-transform: uppercase;
+		margin-left: 60px;
+		list-style-type: none;
+	}
+	&__link {
+		text-decoration: none;
+		color: #ffffff;
+		font-weight: 400;
+		font-size: 16px;
+		position: relative;
+		&::before {
+			position: absolute;
+			content: "";
+			width: 7px;
+			height: 7px;
+			border: 1px solid #ffffff;
+			border-radius: 50%;
+			left: -20px;
+			top: 5px;
+		}
+		&:hover::before {
+			background-color: #ffffff;
+		}
+	}
+	&__button {
+		display: none;
+		width: 30px;
+		height: 30px;
+		position: relative;
+
+		&_line,
+		&::before,
+		&::after {
+			position: absolute;
+			content: "";
+			width: 30px;
+			height: 4px;
+			background-color: #ffffff;
+		}
+		&::before {
+			top: 5px;
+		}
+		&::after {
+			top: 15px;
+		}
+		&_line {
+			top: 25px;
+		}
+		@media screen and (max-width: $LG) {
+			display: block;
+		}
+	}
+	&__input:checked {
+		@media screen and (max-width: $LG) {
+			& ~ .nav__button::before {
+				transform: rotate(45deg);
+				top: 10px;
+			}
+
+			& ~ .nav__button::after {
+				transform: rotate(-45deg);
+				top: 10px;
+			}
+
+			& ~ .nav__menu {
+				display: block;
+			}
+		}
+	}
+}
+
+.social {
+	&__list {
+		-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+		text-decoration: none;
+		padding-right: 30px;
+		@media screen and (max-width: $XL) {
+			padding-right: 10px;
+		}
+	}
+	&__img {
+		border: 1px solid #ffffff;
+		border-radius: 50%;
+		width: 25px;
+		height: 25px;
+		padding: 10px;
+	}
+}
+
+//slider settings
+
+.slider {
+	max-width: 1200px;
+	display: flex;
+	padding-top: 80px;
+
+	&__item {
+		display: flex;
+		margin: auto auto;
+		padding-top: 80px;
+		min-height: 300px;
+		text-align: center;
+	}
+	&__title,
+	&__text {
+		text-transform: uppercase;
+		color: #ffffff;
+	}
+	&__title {
+		font-family: $mainFont;
+		font-weight: 700;
+		font-size: 80px;
+		padding-bottom: 20px;
+	}
+	&__text {
+		font-size: 18px;
+	}
+}
+
+//jump on the next page
+.scroll {
+	margin-top: -80px;
+	display: flex;
+	justify-content: center;
+}
+.down {
+	padding: 10px;
+	border: 1px solid #ffffff;
+	border-radius: 50%;
+}
+
+//arrows settings
+.arrow:after {
+	width: 11px;
+	height: 2px;
+	background: white;
+	content: "";
+	display: inline-block;
+	transform: rotate(-50deg);
+	margin-left: -5px;
+}
+.arrow:before {
+	width: 12px;
+	height: 2px;
+	background: white;
+	content: "";
+	display: inline-block;
+	transform: rotate(50deg);
+}
+
+//dots settings
+.vertical-dots li button:before {
+	font-size: 50px;
+	position: absolute;
+	top: 80%;
+	right: 10%;
+	margin-right: -50px;
+
+	content: "\00B0";
+	width: 20px;
+	height: 20px;
+
+	opacity: 0.25;
+	color: white;
+	background-color: transparent;
+
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	@media screen and (max-width: $XL) {
+		margin-right: 0;
+		padding-left: 20px;
+	}
+}
+.vertical-dots li.slick-active button:before {
+	position: absolute;
+	top: 50%;
+	opacity: 0.75;
+	color: white;
+	content: "•";
+}
