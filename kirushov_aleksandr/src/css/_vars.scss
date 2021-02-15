@@ -1,0 +1,85 @@
+//Polygraphy
+
+$default-fonts-name:"OpenSans";
+$follbak: Arial,
+Helvetica,
+sans-serif;
+$default-fonts: $default-fonts-name,
+$follbak;
+$default-font-size: 18px;
+$default-line-height: 1.667;
+
+$secondary-fonts-name: "Gotem";
+$secondary-fonts: $secondary-fonts-name,
+$follbak;
+
+
+//Color
+
+
+$azureRadiance: #00a2ff;
+$bittersweet: #ff6363;
+$black: #000000;
+$bondiBlue: #00afaf;
+$bondiBlue: #0683b4;
+$brightSun: #ffe92f;
+$capeCod: #373e40;
+$chathamsBlue: #194177;
+$cornflowerBlue:#7d5cfa;
+$dodgerBlue: #3686fe;
+$dodgerBlue02: #5474fd;
+$dodgerBlue03: #496bfe;
+$eastBay: #37437a;
+$grey: #b9bcd1;
+$horizon: #5585a2;
+$lightRed: #eb304d;
+$malibu: #70bfff;
+$malibu02: #55B7FF;
+$mercury: #e8e8e8;
+$mineShaft: #262626;
+$mineShaft02:#333333;
+$mineShaft03:#232323;
+$mineShaft03Opacity:rgba(35, 35, 35, .9);
+$outerSpace: #2b2d2d;
+$outrageousOrange: #ff6033;
+$pickledBluewood:#2C4058;
+$red:#d62c40;
+$riverBed:#4B5562;
+$scorpion: #5a5a5a;
+$silverChalice: #9d9d9d;
+$spunPearl:#aaa6bd;
+$waxFlower: #ffc3a9;
+$whisper: #f9f8fb;
+$white: #fff;
+$heliotrope:#7E5AFF;
+$pictonBlue:#2CB3EE;
+$iron:#D5D9DE;
+
+
+$textColorPage: $riverBed;
+$textColorWhite: $white;
+$colorBorderPage: $white;
+$bgColorHeader: $cornflowerBlue;
+$colorTitleWhatWe:$pickledBluewood;
+$bgTradeBefore:$malibu02;
+$bgComerceBefore:$heliotrope;
+$bgColorNews:$pictonBlue;
+$colorNewsData:$malibu02;
+$borderInputNoActive:$iron;
+
+
+$bgColorBtnHeader: $dodgerBlue02;
+$bgColorWhyChoose: $capeCod;
+$colorBeforeBtn: $dodgerBlue03;
+$bgColorSearch: $mineShaft02;
+$bgAround01: $dodgerBlue02;
+$bgAround02: $bittersweet;
+$bgAround03: $azureRadiance;
+$bgColorWhatWe: $spunPearl;
+$bgSpainWrapp: $mineShaft03Opacity;
+$bgSpain02Wrapp: $waxFlower;
+$bgColorTourist: $outerSpace;
+$bgFooter: $mineShaft03;
+$fiilSvgFooter: $eastBay;
+
+$defaultBoxShadow: 0 0 2px 1px rgba(0, 0, 0, .35);

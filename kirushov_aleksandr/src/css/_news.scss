@@ -1,0 +1,358 @@
+.news {
+    background-image: url(../image/bgNews.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-color: $bgColorNews;
+    padding: 144px 0 141px;
+
+    &__title {
+        text-align: center;
+        font-size: 44px;
+        color: $textColorWhite;
+        font-family: $secondary-fonts;
+        font-weight: 600;
+        text-transform: uppercase;
+        position: relative;
+
+        &::before {
+            content: '';
+            top: -19px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background-color: $textColorWhite;
+        }
+    }
+
+    &__slider-dots {
+        width: 100%;
+        height: 5px;
+        position: relative;
+        left: 50%;
+        transform: translateX(-50%);
+
+        & .slick-dots li {
+            margin: 0 19px;
+            width: 10px;
+            height: 10px;
+
+            & button {
+                padding: 0;
+            }
+        }
+
+        & .slick-dots li button:before {
+            content: '';
+            width: 8px;
+            height: 8px;
+            border: 1px solid $textColorWhite;
+            border-radius: 50%;
+            opacity: 1;
+        }
+
+        & .slick-dots li.slick-active button:before {
+            background-color: $textColorWhite;
+        }
+
+        & .slick-dots li button:hover:before {
+            opacity: .5;
+        }
+    }
+
+    &__list {
+        margin-top: 65px;
+
+        & .slick-prev,
+        & .slick-next {
+            width: 40px;
+            height: 40px;
+            border: 1px solid $textColorWhite;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            @media screen and (max-width: $XL) {
+                visibility: hidden;
+                pointer-events: none;
+            }
+        }
+
+        & .slick-prev {
+            left: -84px;
+        }
+
+        & .slick-next {
+            right: -84px;
+        }
+
+        & .slick-next:before,
+        & .slick-prev:before {
+            content: '';
+        }
+
+        & .news__arrow-prev,
+        & .news__arrow-next {
+            width: 5px;
+            height: 5px;
+            border: 1px solid $textColorWhite;
+            border-top: none;
+            border-right: none;
+        }
+
+        & .news__arrow-prev {
+            transform: rotate(45deg);
+        }
+
+        & .news__arrow-next {
+            transform: rotate(-135deg);
+        }
+
+        & .slick-prev:hover,
+        & .slick-next:hover {
+            background-color: $textColorWhite;
+            opacity: .8;
+            transition: background-color .5s ease-in-out;
+        }
+
+        & .slick-prev:hover .news__arrow-prev,
+        & .slick-next:hover .news__arrow-next {
+            border-color: $bgColorNews;
+        }
+    }
+
+    &__item {
+        height: 517px;
+        position: relative;
+        padding: 0 10px;
+
+        &:focus,
+        &:active,
+        & a:focus,
+        & a:active {
+            outline: none;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        display: block;
+        max-width: 370px;
+        height: 100%;
+        position: relative;
+
+        @media screen and (max-width: $MD) {
+            margin: 0 auto;
+        }
+
+        &:hover .news__img-wrapp::after,
+        &:hover .news__img-hovefect-wrapp {
+            visibility: visible;
+        }
+    }
+
+    &__img {
+        display: block;
+        width: 100%;
+
+        &-wrapp {
+            width: 100%;
+            position: relative;
+
+            &::after {
+                content: '';
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                background: linear-gradient(0deg, rgba(2, 0, 36, .5) 0%, rgba(0, 0, 0, .5) 100%, rgba(0, 212, 255, .5) 100%);
+                z-index: 100;
+                visibility: hidden;
+            }
+        }
+
+
+        &-hovefect {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 1px solid $textColorWhite;
+
+            &-wrapp {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                visibility: hidden;
+                z-index: 200;
+
+                &-beAfter {
+                    position: relative;
+
+                    &::before,
+                    &::after {
+                        content: '';
+                        width: 23px;
+                        height: 1px;
+                        background-color: $textColorWhite;
+                        position: absolute;
+                        top: 50%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                    }
+
+                    &::before {
+                        transform: rotate(90deg);
+                        left: 37%;
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    &__content {
+        height: 100%;
+        background-color: $textColorWhite;
+        padding: 20px 45px 20px 20px;
+    }
+
+    &__heading {
+        font-size: 22px;
+        color: $colorTitleWhatWe;
+        font-weight: bold;
+        font-family: $secondary-fonts;
+        text-transform: uppercase;
+
+        @media screen and (max-width: $XL) {
+            font-size: 20px;
+        }
+    }
+
+    &__text {
+        color: $textColorPage;
+    }
+
+    &__autor {
+        display: flex;
+        padding-top: 32px;
+        position: absolute;
+        bottom: 30px;
+        left: 20px;
+
+        &-foto {
+            width: 60px;
+            height: 60px;
+        }
+
+        &-name {
+            color: $colorTitleWhatWe;
+            font-family: $secondary-fonts;
+            text-transform: uppercase;
+
+            @media screen and (max-width: $XL) {
+                font-size: 14px;
+            }
+
+            &-wrapp {
+                padding-left: 20px;
+            }
+        }
+    }
+
+    &__data {
+        font-size: 14px;
+        color: $colorNewsData;
+        font-family: $secondary-fonts;
+    }
+
+}
+
+@media (max-width:1368px) {
+    .news {
+
+        &__list {
+
+            &:hover .slick-prev,
+            &:hover .slick-next {
+                visibility: visible;
+                pointer-events: painted;
+            }
+
+            & .slick-prev,
+            & .slick-next {
+                border: 2px solid $pictonBlue;
+                z-index: 1;
+                top: 47%;
+                visibility: hidden;
+                pointer-events: none;
+            }
+
+            & .slick-prev {
+                left: 28px;
+            }
+
+            & .slick-next {
+                right: 28px;
+            }
+
+            & .news__arrow-prev,
+            & .news__arrow-next {
+                border-color: $pictonBlue;
+
+            }
+        }
+    }
+}
+
+@media (max-width:$MD) {
+    .news {
+
+        &__list {
+
+            & .slick-prev,
+            & .slick-next {
+                border: 2px solid $textColorWhite;
+                visibility: visible;
+                top: 51%;
+            }
+
+            & .news__arrow-prev,
+            & .news__arrow-next {
+                border-color: $textColorWhite;
+            }
+        }
+    }
+}
+
+@media (max-width:560px) {
+    .news {
+
+        &__list {
+
+            & .slick-prev,
+            & .slick-next {
+                border: 2px solid $pictonBlue;
+                visibility: hidden;
+            }
+
+            & .news__arrow-prev,
+            & .news__arrow-next {
+                border-color: $pictonBlue;
+            }
+
+            & .slick-prev {
+                left: 71px;
+            }
+
+            & .slick-next {
+                right: 71px;
+            }
+        }
+    }
+}

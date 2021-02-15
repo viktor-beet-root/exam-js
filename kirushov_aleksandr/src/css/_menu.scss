@@ -1,0 +1,266 @@
+.menu {
+    display: flex;
+    align-items: center;
+
+    @media screen and (max-width: $XL) {
+        padding-left: 30px;
+    }
+
+    &__noSticky {
+        position: absolute;
+        height: 122px;
+        left: 0px;
+        right: 0px;
+    }
+
+    &__row {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__list {
+        width: 100%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @media screen and (max-width: $LG) {
+            display: block;
+            visibility: hidden;
+            pointer-events: none;
+            padding: 0;
+            opacity: 0;
+            position: absolute;
+            top: 0;
+            width: 123px;
+            left: 48%;
+            text-align: center;
+            transform: scale(0);
+            transition: all .5s ease-in-out;
+        }
+
+        @media screen and (max-width: $MD) {
+            top: 84px;
+            left: 0;
+            right: 0;
+            width: 100%;
+            background-image: url(../image/bgFooter.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: top center;
+            background-color: $bgColorHeader;
+            z-index: 200;
+        }
+    }
+
+    &__btn {
+        width: 30px;
+        height: 30px;
+        display: none;
+        position: absolute;
+        top: 42px;
+        right: 32%;
+        z-index: 100;
+
+        @media screen and (max-width: $LG) {
+            display: block;
+        }
+
+        @media screen and (max-width: $MD) {
+            right: 106px;
+            top: 84px;
+            z-index: 300;
+        }
+
+        @media screen and (max-width: $SM) {
+            right: 15px;
+            top: 42px;
+        }
+
+        &-line {
+            display: block;
+            position: relative;
+            height: 4px;
+            width: 100%;
+            transition: height 1s ease-in-out;
+            background-color: $textColorWhite;
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 13px;
+                height: 4px;
+                width: 100%;
+                background-color: $textColorWhite;
+                transition: transform 1s ease-in-out;
+            }
+
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                top: 26px;
+                height: 4px;
+                width: 100%;
+                background-color: $textColorWhite;
+                transition: transform 1s ease-in-out;
+            }
+        }
+    }
+
+    &__input:checked {
+        @media screen and (max-width: $LG) {
+            &~.menu__list {
+                display: block;
+                visibility: visible;
+                pointer-events: all;
+                transform: scale(1);
+                opacity: 1;
+                transition: all .5s ease-in-out;
+            }
+
+            &~.menu__btn>span {
+                top: 13px;
+                transform: rotate(45deg);
+                transition: transform 0.5s ease-in-out;
+                visibility: hidden;
+            }
+
+            &~.menu__btn>span::before {
+                top: 0;
+                transform: rotate(180deg);
+                transition: transform 0.5s ease-in-out;
+                visibility: visible;
+            }
+
+            &~.menu__btn>span::after {
+                top: 0;
+                transform: rotate(90deg);
+                transition: transform 0.5s ease-in-out;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__item {
+        padding-bottom: 8px;
+
+        @media screen and (max-width: $LG) {
+            padding: 0;
+        }
+
+        @media screen and (max-width: $MD) {
+            border-bottom: 1px solid $textColorWhite;
+        }
+    }
+
+    &__active::before {
+        background-color: $textColorWhite;
+    }
+
+    &__link {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        @media screen and (max-width: $LG) {
+            display: block;
+        }
+    }
+
+    &__link::before {
+        content: '';
+        position: absolute;
+        top: 7px;
+        left: -21px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        border: 1px solid $textColorWhite;
+
+        @media screen and (max-width: $XL) {
+            left: -15px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+
+        @media screen and (max-width: $LG) {
+            left: -10px;
+        }
+
+        @media screen and (max-width: $MD) {
+            left: 32%
+        }
+    }
+
+    &__link:hover::before {
+        background-color: $textColorWhite;
+    }
+
+    &__link-text {
+        font-family: $secondary-fonts;
+        color: $textColorWhite;
+        text-transform: uppercase;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    &__sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-image: url(../image/bg_footer1.jpg);
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: top center;
+        background-color: $bgColorHeader;
+        z-index: 1000;
+        transition: opacity .5s ease-in-out;
+    }
+}
+
+.header .social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 7px 0 0 9px;
+
+    @media screen and (max-width: $XL) {
+        justify-content: space-around;
+    }
+
+    @media screen and (max-width: $SM) {
+        display: none;
+    }
+
+    &__wrapp {
+        display: flex;
+    }
+
+    &__link {
+        display: flex;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        border: 1px solid $colorBorderPage;
+    }
+
+    &__link:hover path {
+        fill: $cornflowerBlue;
+    }
+
+    &__link:hover {
+        background-color: $white;
+        transition: background-color .5s ease-in-out;
+    }
+}
+
+@media (max-width:$XL) {
+    .menu {
+        &__list {}
+    }
+}

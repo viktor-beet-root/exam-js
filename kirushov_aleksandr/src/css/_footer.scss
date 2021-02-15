@@ -1,0 +1,261 @@
+.footer {
+    background-image: url(../image/bgFooter.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-color: $bgColorHeader;
+    margin-top: -164px;
+
+    &__wrapp {
+        padding: 188px 0 192px;
+        width: 65.8119%;
+        margin: 0 auto;
+    }
+
+    &__cover {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 54px;
+
+        @media screen and (max-width: $LG) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    &__social {
+        padding-top: 7px;
+        width: 167px;
+    }
+
+    &__content {
+        display: flex;
+        max-width: 411px;
+        justify-content: space-between;
+        margin-top: 28px;
+    }
+
+    &__text {
+        color: $textColorWhite;
+        font-family: $secondary-fonts;
+        font-size: 14px;
+
+        @media screen and (max-width: $SM) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    & .social {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        padding: 0 0px 7px 9px;
+
+        &__wrapp {
+            display: flex;
+        }
+
+        &__link {
+            display: flex;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 1px solid $colorBorderPage;
+        }
+
+        &__link:hover path {
+            fill: $cornflowerBlue;
+        }
+
+        &__link:hover {
+            background-color: $white;
+            transition: background-color .5s ease-in-out;
+        }
+    }
+
+    & .contact {
+        &__wrapp {
+            position: relative;
+            margin: -340px auto 0;
+            max-width: 770px;
+            z-index: 100;
+            background-color: $textColorWhite;
+            padding: 69px 60px 45px;
+
+            @media screen and (max-width: $SM) {
+                padding: 69px 40px 45px;
+            }
+
+            @media screen and (max-width: 350px) {
+                padding: 69px 15px 45px;
+            }
+        }
+
+        &__title {
+            font-size: 44px;
+            color: $colorTitleWhatWe;
+            font-weight: 600;
+            font-family: $secondary-fonts;
+            text-align: center;
+            text-transform: uppercase;
+            position: relative;
+
+            @media screen and (max-width: $SM) {
+                font-size: 30px;
+            }
+
+            &::before {
+                content: '';
+                top: -9px;
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                width: 100px;
+                height: 1px;
+                background-color: $colorTitleWhatWe;
+            }
+        }
+
+        &__content {
+            padding-right: 30px;
+
+            @media screen and (max-width: $SM) {
+                padding: 0;
+            }
+
+            &-wrapp {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 31px;
+
+                @media screen and (max-width: $LG) {
+                    display: block;
+                }
+            }
+        }
+
+        &__form {
+            display: flex;
+            flex-direction: column;
+            width: 48%;
+
+            @media screen and (max-width: $LG) {
+                width: 100%
+            }
+
+            &-name,
+            &-email,
+            &-btn {
+                font-family: $secondary-fonts;
+                color: $colorTitleWhatWe;
+                outline: none;
+            }
+
+            &-name:active,
+            &-email:active,
+            &-btn:active {
+                outline: none;
+            }
+
+            &-name:active,
+            &-email:active,
+            &-name:focus,
+            &-email:focus {
+                border-bottom: 1px solid $colorTitleWhatWe;
+            }
+
+            &-name,
+            &-email {
+                border: transparent;
+                border-bottom: 1px solid $borderInputNoActive;
+                font-weight: 600;
+                padding: 6px 0 16px;
+            }
+
+            &-name::placeholder,
+            &-email::placeholder {
+                color: $borderInputNoActive
+            }
+
+            &-email {
+                margin-top: 30px;
+            }
+
+            &-btn {
+                margin-top: 31px;
+                width: 140px;
+                height: 50px;
+                border: 1px solid $colorTitleWhatWe;
+                align-self: flex-end;
+                text-transform: uppercase;
+                font-size: 14px;
+                background-color: transparent;
+
+                @media screen and (max-width: 350px) {
+                    width: 100%;
+                }
+
+                &:hover {
+                    box-shadow: $defaultBoxShadow;
+                    transform: scale(1.1);
+                    transition: transform .5s ease-in-out;
+                }
+            }
+        }
+
+        &__tel,
+        &__adress,
+        &__email,
+        &__time {
+            position: relative;
+            padding-left: 23px;
+            color: $colorTitleWhatWe;
+            font-family: $secondary-fonts;
+            font-weight: 600;
+            margin-bottom: 28px;
+
+            @media screen and (max-width: $SM) {
+                padding: 0;
+                font-size: 14px;
+                text-align: center;
+            }
+        }
+
+        &__adress::before {
+            content: url(../image/location.svg);
+        }
+
+        &__tel::before {
+            content: url(../image/phone.svg);
+        }
+
+        &__email::before {
+            content: url(../image/email.svg);
+        }
+
+        &__time::before {
+            content: url(../image/clock.svg);
+        }
+
+        &__tel::before,
+        &__adress::before,
+        &__email::before,
+        &__time::before {
+            position: absolute;
+            width: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+
+            @media screen and (max-width: $SM) {
+                top: -20px;
+                left: 50%;
+                transform: translateX(-50%);
+
+            }
+        }
+    }
+}

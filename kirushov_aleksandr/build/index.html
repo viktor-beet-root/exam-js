@@ -1,0 +1,625 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Ekzam2 - JS</title>
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+        <link rel="stylesheet" href="css/slick.css">
+        <link rel="stylesheet" href="css/slick-theme.css">
+        <link rel="stylesheet" href="css/lightbox.css">
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+    <body class="page">
+        <header class="header" id="header">
+            <div class="menu__wrapp menu__noSticky">
+                <div class="container menu__container">
+                    <div class="row menu__row">
+                        <div class="col-3 col-xl-3 col-lg-5 col-md-6 logo">
+                            <a href="#header" class="logo__link">
+                                <img src="image/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <nav class="col-7 col-xl-6 col-lg-3 col-md-1 menu">
+                            <input class="menu__input" hidden aria-hidden="true" type="checkbox" id="menuBtn">
+                            <label class="menu__btn" aria-label="button menu" for="menuBtn">
+                                <span class="menu__btn-line"></span>
+                            </label>
+                            <ul class="menu__list">
+                                <li class="menu__item">
+                                    <a href="#whatWeDo" class="menu__link" name="whatWeDo">
+                                        <span class="menu__link-text">About Us</span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#gallery" class="menu__link" name="gallery">
+                                        <span class="menu__link-text">Projects</span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#news" class="menu__link" name="news">
+                                        <span class="menu__link-text">news</span>
+                                    </a>
+                                </li>
+                                <li class="menu__item">
+                                    <a href="#contact" class="menu__link" name="contact">
+                                        <span class="menu__link-text">Contact</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                        <div class="col-2 col-xl-3 col-md-5 lsocial__wrapp">
+                            <ul class="social">
+                                <li class="social__item">
+                                    <a href="" class="social__link">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab" role="img"
+                                            viewBox="0 0 320 512" width="9px" heigh="16px" class="social__svg">
+                                            <path fill="#fff"
+                                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="" class="social__link">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab" role="img"
+                                            viewBox="0 0 512 512" width="15px" heigh="12px" class="social__svg">
+                                            <path fill="#fff"
+                                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="" class="social__link">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab" role="img"
+                                            viewBox="0 0 448 512" width="15px" heigh="15px" class="social__svg">
+                                            <path fill="#fff"
+                                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="container header__slider-wrapp">
+                <div class="header__slider">
+                    <div class="header__slider-items">
+                        <h1 class="header__title">Simple & mordern</h1>
+                        <p class="header__text">We make the world's beautiful every day</p>
+                    </div>
+                    <div class="header__slider-items">
+                        <h1 class="header__title">Simple & mordern</h1>
+                        <p class="header__text">We make the world's beautiful every day</p>
+                    </div>
+                    <div class="header__slider-items">
+                        <h1 class="header__title">Simple & mordern</h1>
+                        <p class="header__text">We make the world's beautiful every day</p>
+                    </div>
+                    <div class="header__slider-items">
+                        <h1 class="header__title">Simple & mordern</h1>
+                        <p class="header__text">We make the world's beautiful every day</p>
+                    </div>
+                    <div class="header__slider-items">
+                        <h1 class="header__title">Simple & mordern</h1>
+                        <p class="header__text">We make the world's beautiful every day</p>
+                    </div>
+                </div>
+            </div>
+            <div class="header__dots"></div>
+            <a href="#whatWeDo" class="header__scroll">
+                <div class="header__scroll-arrow"></div>
+            </a>
+        </header>
+        <main class="main">
+            <section class="whatWeDo" id="whatWeDo">
+                <div class="container whatWeDo__container">
+                    <h2 class="whatWeDo__heading">What We Do</h2>
+                    <div class="whatWeDo__content whatWeDo__content-trade">
+                        <div class="row">
+                            <div class="col-7 col-xl-8 col-lg-12">
+                                <img class="whatWeDo__content-img " src="image/about01.jpg" alt="picture">
+                            </div>
+                            <div class="col-5 col-xl-4 col-lg-12">
+                                <h3 class="whatWeDo__content-title">One World</h3>
+                                <h2 class="whatWeDo__content-title2">Trade Center</h2>
+                                <p class="whatWeDo__content-text">Increasing prosperity in our lives can be accomplished
+                                    by having the right frame of mind. The truth is, our thoughts are very powerful.
+                                </p>
+                                <a class="whatWeDo__content-btn" href="#">
+                                    <span class="whatWeDo__content-btn-text">More details</span>
+                                </a>
+                                <p class="whatWeDo__content-location">
+                                    <svg aria-hidden="true" focusable="false" width="12px" height="17px" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path fill="#2C4058"
+                                            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
+                                        </path>
+                                    </svg>
+                                    New York City, United States - 1776 feet</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="whatWeDo__content whatWeDo__content-commerce">
+                        <div class="row">
+                            <div class="col-5 col-xl-4 col-lg-12">
+                                <h3 class="whatWeDo__content-title">International</h3>
+                                <h2 class="whatWeDo__content-title2">Commerce Centre</h2>
+                                <p class="whatWeDo__content-text">Successful businesses have many things in common,
+                                    today we’ll look at the big ‘R’ of recognition and how a digital advertising network
+                                    may help.
+                                </p>
+                                <a class="whatWeDo__content-btn" href="#"><span class="whatWeDo__content-btn-text">More
+                                        details</span></a>
+                                <p class="whatWeDo__content-location">
+                                    <svg aria-hidden="true" focusable="false" width="12px" height="17px" role="img"
+                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
+                                        <path fill="#2C4058"
+                                            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
+                                        </path>
+                                    </svg>
+                                    Hong Kong - 1588 Fee</p>
+                            </div>
+                            <div class="col-7 col-xl-8 col-lg-12">
+                                <img class="whatWeDo__content-img whatWeDo__content-img-commerce"
+                                    src="image/about02.jpg" alt="picture">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="news" id="news">
+                <div class="container">
+                    <h2 class="news__title">latest news</h2>
+                    <div class="row">
+                        <ul class="news__list col-12">
+                            <li class="news__item">
+                                <a href="" class="news__link">
+                                    <div class="news__img-wrapp">
+                                        <img src="image/news01.jpg" alt="foto" class="news__img">
+                                        <div class="news__img-hovefect-wrapp">
+                                            <div class="news__img-hovefect-wrapp-beAfter">
+                                                <div class="news__img-hovefect"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="news__content">
+                                        <h3 class="news__heading">See The Unmatched Beauty Of The Great. </h3>
+                                        <p class="news__text">Free directories: directories are perfect for customers
+                                            that are...
+                                        </p>
+                                        <div class="news__autor">
+                                            <img src="image/news_autor01.png" alt="autor-foto" class="news__autor-foto">
+                                            <div class="news__autor-name-wrapp">
+                                                <stong class="news__autor-name">Isaac Dunn</stong>
+                                                <p class="news__data">09 Feb 2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="news__item">
+                                <a href="" class="news__link">
+                                    <div class="news__img-wrapp">
+                                        <img src="image/news02.jpg" alt="foto" class="news__img">
+                                        <div class="news__img-hovefect-wrapp">
+                                            <div class="news__img-hovefect-wrapp-beAfter">
+                                                <div class="news__img-hovefect"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="news__content">
+                                        <h3 class="news__heading">Effective Advertising Pointers.</h3>
+                                        <p class="news__text">Having a home based business is a wonderful asset to your
+                                            life...
+                                        </p>
+                                        <div class="news__autor">
+                                            <img src="image/news_autor02.png" alt="autor-foto" class="news__autor-foto">
+                                            <div class="news__autor-name-wrapp">
+                                                <stong class="news__autor-name">Dominic Freeman</stong>
+                                                <p class="news__data">24 Apr 2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="news__item">
+                                <a href="" class="news__link">
+                                    <div class="news__img-wrapp">
+                                        <img src="image/news03.jpg" alt="foto" class="news__img">
+                                        <div class="news__img-hovefect-wrapp">
+                                            <div class="news__img-hovefect-wrapp-beAfter">
+                                                <div class="news__img-hovefect"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="news__content">
+                                        <h3 class="news__heading">Hypnotize Yourself Into The Ghost.</h3>
+                                        <p class="news__text">There are many things that are important to catalog
+                                            design....
+                                        </p>
+                                        <div class="news__autor">
+                                            <img src="./image/news_autor03.png" alt="autor-foto"
+                                                class="news__autor-foto">
+                                            <div class="news__autor-name-wrapp">
+                                                <stong class="news__autor-name">Alice Ward</stong>
+                                                <p class="news__data">30 Dec 2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="news__item">
+                                <a href="№" class="news__link">
+                                    <div class="news__img-wrapp">
+                                        <img src="image/news01.jpg" alt="foto" class="news__img">
+                                        <div class="news__img-hovefect-wrapp">
+                                            <div class="news__img-hovefect-wrapp-beAfter">
+                                                <div class="news__img-hovefect"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="news__content">
+                                        <h3 class="news__heading">See The Unmatched Beauty Of The Great. </h3>
+                                        <p class="news__text">Free directories: directories are perfect for customers
+                                            that are...
+                                        </p>
+                                        <div class="news__autor">
+                                            <img src="./image/news_autor01.png" alt="autor-foto"
+                                                class="news__autor-foto">
+                                            <div class="news__autor-name-wrapp">
+                                                <stong class="news__autor-name">Isaac Dunn</stong>
+                                                <p class="news__data">09 Feb 2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                            <li class="news__item">
+                                <a href="" class="news__link">
+                                    <div class="news__img-wrapp">
+                                        <img src="image/news02.jpg" alt="foto" class="news__img">
+                                        <div class="news__img-hovefect-wrapp">
+                                            <div class="news__img-hovefect-wrapp-beAfter">
+                                                <div class="news__img-hovefect"></div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="news__content">
+                                        <h3 class="news__heading">Effective Advertising Pointers.</h3>
+                                        <p class="news__text">Having a home based business is a wonderful asset to your
+                                            life...
+                                        </p>
+                                        <div class="news__autor">
+                                            <img src="./image/news_autor02.png" alt="autor-foto"
+                                                class="news__autor-foto">
+                                            <div class="news__autor-name-wrapp">
+                                                <stong class="news__autor-name">Dominic Freeman</stong>
+                                                <p class="news__data">24 Apr 2017</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="news__slider-dots"></div>
+                    </div>
+                </div>
+            </section>
+            <section class="gallery" id="gallery">
+                <div class="container">
+                    <h2 class="gallery__title">gallery</h2>
+                    <div class="gallery__img-wrapp">
+                        <div class="gallery__img-row01">
+                            <div class="gallery__img-col-50 gallery__img-big">
+                                <a data-lightbox="roadtrip" href="image/gallery01.jpg">
+                                    <img class="gallery__img" src="image/gallery01.jpg" alt="Foto buildings">
+                                </a>
+                            </div>
+                            <div class="gallery__img-col-50">
+                                <div class="gallery__img-col-25">
+                                    <a data-lightbox="roadtrip" href="image/gallery02.jpg">
+                                        <img class="gallery__img" src="image/gallery02.jpg" alt="Foto buildings">
+                                    </a>
+                                </div>
+                                <div class="gallery__img-col-25">
+                                    <a data-lightbox="roadtrip" href="image/gallery03.jpg">
+                                        <img class="gallery__img" src="image/gallery03.jpg" alt="Foto buildings">
+                                    </a>
+                                </div>
+                                <div class="gallery__img-col-25">
+                                    <a data-lightbox="roadtrip" href="image/gallery04.jpg">
+                                        <img class="gallery__img" src="image/gallery04.jpg" alt="Foto buildings">
+                                    </a>
+                                </div>
+                                <div class="gallery__img-col-25">
+                                    <a data-lightbox="roadtrip" href="image/gallery05.jpg">
+                                        <img class="gallery__img" src="image/gallery05.jpg" alt="Foto buildings">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="gallery__img-row02 gallery__hidden">
+                            <div class="gallery__img-col-50">
+                                <div class="gallery__img-col-25">
+                                    <a data-lightbox="roadtrip" href="image/gallery06.jpg">
+                                        <img class="gallery__img" src="image/gallery06.jpg" alt="Foto buildings">
+                                    </a>
+                                </div>
+                                <div class="gallery__img-col-25">
+                                    <a data-lightbox="roadtrip" href="image/gallery07.jpg">
+                                        <img class="gallery__img" src="image/gallery07.jpg" alt="Foto buildings">
+                                    </a>
+                                </div>
+                                <div class="gallery__img-col-25">
+                                    <a data-lightbox="roadtrip" href="image/gallery08.jpg">
+                                        <img class="gallery__img " src="image/gallery08.jpg" alt="Foto buildings">
+                                    </a>
+                                </div>
+                                <div class="gallery__img-col-25">
+                                    <a data-lightbox="roadtrip" href="image/gallery09.jpg">
+                                        <img class="gallery__img" src="image/gallery09.jpg" alt="Foto buildings">
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="gallery__img-col-50">
+                                <div class="gallery__img-col-25">
+                                    <a data-lightbox="roadtrip" href="image/gallery10.jpg">
+                                        <img class="gallery__img " src="image/gallery10.jpg" alt="Foto buildings">
+                                    </a>
+                                </div>
+                                <div class="gallery__img-col-25">
+                                    <a data-lightbox="roadtrip" href="image/gallery11.jpg">
+                                        <img class="gallery__img" src="image/gallery11.jpg" alt="Foto buildings">
+                                    </a>
+                                </div>
+                                <div class="gallery__img-col-25">
+                                    <a data-lightbox="roadtrip" href="image/gallery12.jpg">
+                                        <img class="gallery__img" src="image/gallery12.jpg" alt="Foto buildings">
+                                    </a>
+                                </div>
+                                <div class="gallery__img-col-25">
+                                    <a data-lightbox="roadtrip" href="image/gallery13.jpg">
+                                        <img class="gallery__img" src="image/gallery13.jpg" alt="Foto buildings">
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <a href="#gallery__btn" class="gallery__btn" id="gallery__btn">
+                        <span class="gallery__btn-text">See more</span>
+                    </a>
+                </div>
+            </section>
+            <section class="maps">
+                <div class="maps__map" id="map">
+                    <script>
+                        function initMap() {
+                            const cords = {
+                                lat: 50.41230533423103,
+                                lng: 30.544846627880688
+                            };
+                            const map = new google.maps.Map(document.getElementById('map'), {
+                                center: cords,
+                                zoom: 11,
+
+                                styles: [{
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                            "color": "#e8e8e8"
+                                        }]
+                                    },
+                                    {
+                                        "elementType": "labels.icon",
+                                        "stylers": [{
+                                            "visibility": "off"
+                                        }]
+                                    },
+                                    {
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [{
+                                            "color": "#616161"
+                                        }]
+                                    },
+                                    {
+                                        "elementType": "labels.text.stroke",
+                                        "stylers": [{
+                                            "color": "#f5f5f5"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "administrative.land_parcel",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [{
+                                            "color": "#908989"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "poi",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                            "color": "#eeeeee"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "poi",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [{
+                                            "color": "#757575"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "poi.park",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                            "color": "#8C8C87"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "poi.park",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [{
+                                            "color": "#9e9e9e"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "road",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                            "color": "#ffffff"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "road.arterial",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [{
+                                            "color": "#757575"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "road.highway",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                            "color": "#dadada"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "road.highway",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [{
+                                            "color": "#616161"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "road.local",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [{
+                                            "color": "#9e9e9e"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "transit.line",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                            "color": "#e5e5e5"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "transit.station",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                            "color": "#eeeeee"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "water",
+                                        "elementType": "geometry",
+                                        "stylers": [{
+                                            "color": "#c9c9c9"
+                                        }]
+                                    },
+                                    {
+                                        "featureType": "water",
+                                        "elementType": "labels.text.fill",
+                                        "stylers": [{
+                                            "color": "#9e9e9e"
+                                        }]
+                                    }
+                                ]
+                            });
+
+                            const marker = new google.maps.Marker({
+                                position: {
+                                    lat: 50.45866512019024,
+                                    lng: 30.518067452139135
+                                },
+                                map: map,
+                                icon: './image/marker.png',
+                            })
+                        };
+                    </script>
+                    <script defer
+                        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIrn05IemTe8wCfU2Eevsr8ikGrHhecz8&callback=initMap">
+                    </script>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <div class="footer__wrapp">
+                    <div class="contact__wrapp" id="contact">
+                        <h2 class="contact__title">get in touch</h2>
+                        <div class="contact__content-wrapp">
+                            <div class="contact__content">
+                                <p class="contact__adress">91 Nolan Extensions Suite 670</p>
+                                <p class="contact__tel">+001 356-868-2454</p>
+                                <p class="contact__email">gahuy93@gmail.com</p>
+                                <p class="contact__time">From 07:05AM to 19:30PM</p>
+                            </div>
+                            <form action="" method="POST" class="contact__form">
+                                <input type="text" class="contact__form-name" value="" placeholder="Name">
+                                <input type="email" class="contact__form-email" value="" placeholder="Email">
+                                <input type="submit" class="contact__form-btn" value="Submit">
+                            </form>
+                        </div>
+                    </div>
+                    <div class="footer__cover">
+                        <div class="footer__logo">
+                            <a href="#header" class="footer__logo-link">
+                                <img src="image/logo.svg" alt="logo">
+                            </a>
+                        </div>
+                        <div class="footer__social">
+                            <ul class="social">
+                                <li class="social__item">
+                                    <a href="" class="social__link">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab" role="img"
+                                            viewBox="0 0 320 512" width="9px" heigh="16px" class="social__svg">
+                                            <path fill="#fff"
+                                                d="M279.14 288l14.22-92.66h-88.91v-60.13c0-25.35 12.42-50.06 52.24-50.06h40.42V6.26S260.43 0 225.36 0c-73.22 0-121.08 44.38-121.08 124.72v70.62H22.89V288h81.39v224h100.17V288z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="" class="social__link">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab" role="img"
+                                            viewBox="0 0 512 512" width="15px" heigh="12px" class="social__svg">
+                                            <path fill="#fff"
+                                                d="M459.37 151.716c.325 4.548.325 9.097.325 13.645 0 138.72-105.583 298.558-298.558 298.558-59.452 0-114.68-17.219-161.137-47.106 8.447.974 16.568 1.299 25.34 1.299 49.055 0 94.213-16.568 130.274-44.832-46.132-.975-84.792-31.188-98.112-72.772 6.498.974 12.995 1.624 19.818 1.624 9.421 0 18.843-1.3 27.614-3.573-48.081-9.747-84.143-51.98-84.143-102.985v-1.299c13.969 7.797 30.214 12.67 47.431 13.319-28.264-18.843-46.781-51.005-46.781-87.391 0-19.492 5.197-37.36 14.294-52.954 51.655 63.675 129.3 105.258 216.365 109.807-1.624-7.797-2.599-15.918-2.599-24.04 0-57.828 46.782-104.934 104.934-104.934 30.213 0 57.502 12.67 76.67 33.137 23.715-4.548 46.456-13.32 66.599-25.34-7.798 24.366-24.366 44.833-46.132 57.827 21.117-2.273 41.584-8.122 60.426-16.243-14.292 20.791-32.161 39.308-52.628 54.253z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                                <li class="social__item">
+                                    <a href="" class="social__link">
+                                        <svg aria-hidden="true" focusable="false" data-prefix="fab" role="img"
+                                            viewBox="0 0 448 512" width="15px" heigh="15px" class="social__svg">
+                                            <path fill="#fff"
+                                                d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9-26.2-26.2-58-34.4-93.9-36.2-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1s-34.4 58-36.2 93.9c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.4 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2 26.2-26.2 34.4-58 36.2-93.9 2.1-37 2.1-147.8 0-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z">
+                                            </path>
+                                        </svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="footer__content">
+                        <p class="footer__text">Copyrights © 2017 Monticello</p>
+                        <span class="footer__text">|</span>
+                        <p class="footer__text">Made with &#10084 by Ga Huy</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <script src="js/jquery.min.js"></script>
+        <script src="js/slick.min.js"></script>
+        <script src="js/script.min.js"></script>
+        <script src="js/lightbox-min.js"></script>
+    </body>
+</html>
