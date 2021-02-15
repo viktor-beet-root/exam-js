@@ -12,7 +12,7 @@ $(document).ready(function () {
     const header = document.getElementById('header');
     const bgNum = [1, 2, 3, 4, 5];
     $slider.on('afterChange', function (e, slick, index) {
-        header.style.backgroundImage = 'url(/kirushov_aleksandr/build/image/bg_footer' + bgNum[index] + '.jpg)';
+        header.style.backgroundImage = 'url(./image/bg_footer' + bgNum[index] + '.jpg)';
         header.style.transition = 'background-image .5s ease-in-out';
 
     });
