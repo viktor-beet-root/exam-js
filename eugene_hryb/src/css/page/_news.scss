@@ -33,6 +33,10 @@
                     outline: none;
                     border: none;
                     cursor: pointer;
+
+                    &:active{
+                        outline: none;
+                    }
                 }
             }
 
@@ -46,7 +50,7 @@
             margin-right: -100px;
 
             &::before{
-                content: url('../../image/chevron-right-solid.svg');
+                content: url('../image/chevron-right-solid.svg');
             }
         }
 
@@ -54,7 +58,7 @@
             left: 0;
             margin-left: -100px;
             &::before{
-                content: url('../../image/chevron-left-solid.svg');
+                content: url('../image/chevron-left-solid.svg');
             }
         }
 
@@ -71,6 +75,11 @@
             opacity: .6;
             transition: opacity .3s ease-in-out;
             position: absolute;
+            outline: none;
+
+            &:active{
+                outline: none;
+            }
 
             &:hover{
                 opacity: 1;
