@@ -1,10 +1,10 @@
 $defaultFont: "Gotham";
-$secondaryFont: "OpenSans";
+$secondFont: "OpenSans";
 
 $fallback: Arial, Helvetica, sans-serif;
 
 $mainFont: $defaultFont, $fallback;
-$secondaryFont: $secondaryFont, $fallback;
+$secondaryFont: $secondFont, $fallback;
 
 $defaultFontSize: 14px;
 
@@ -21,3 +21,25 @@ $MD_width: 540px;
 //размер SM
 $SM: 576px;
 $SM_width: 100%;
+
+/*colors*/
+$pickledBluewood: #2c4058;
+$white: #ffffff;
+$iron: #d5d9de;
+$riverBed: #4b4462;
+$malibu: #55b7ff;
+$heliotrope: #7e5aff;
+$raven: #7b818a;
+
+$mainTextColor: $pickledBluewood;
+$secondaryTextColor: $white;
+$defaultInputColor: $iron;
+$bgCoverSectionOne: $malibu;
+$bgCoverSectionTwo: $heliotrope;
+$projectsTextColor: $raven;
+$newsTextColor: $riverBed;
+$newsDateColor: $malibu;
+
+/*borders*/
+$buttonBorder: 1px solid $mainTextColor;
+$defaultBorder: 1px solid $secondaryTextColor;

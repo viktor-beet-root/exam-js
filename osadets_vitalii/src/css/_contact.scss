@@ -27,12 +27,12 @@
 	&__title {
 		font-size: 44px;
 		text-transform: uppercase;
-		color: #2c4058;
+		color: $mainTextColor;
 		font-weight: 500;
 		letter-spacing: 2px;
 		&::after {
 			content: "";
-			background: #2c4058;
+			background: $mainTextColor;
 			position: absolute;
 			top: 40%;
 			left: 43%;
@@ -51,7 +51,7 @@
 		font-size: 18px;
 		padding-bottom: 30px;
 		padding-left: 30px;
-		color: #2c4058;
+		color: $mainTextColor;
 		position: relative;
 	}
 	&__img1::before,
@@ -90,11 +90,11 @@
 		margin-bottom: 30px;
 		border: none;
 		padding-bottom: 18px;
-		border-bottom: 1px solid #d5d9de;
+		border-bottom: 1px solid $defaultInputColor;
 		outline: none;
 		&:focus,
 		&:hover {
-			border-bottom: 1px solid #2c4058;
+			border-bottom: 1px solid $mainTextColor;
 		}
 	}
 
@@ -104,7 +104,7 @@
 		height: 50px;
 		margin-left: 160px;
 		&:hover {
-			color: white;
+			color: $secondaryTextColor;
 		}
 	}
 
@@ -128,6 +128,6 @@
 		padding-left: 30px;
 		padding-top: 40px;
 		font-size: 14px;
-		color: #ffffff;
+		color: $secondaryTextColor;
 	}
 }

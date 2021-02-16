@@ -8,7 +8,7 @@
 		height: 470px;
 		top: 18%;
 		left: 0;
-		background: #55b7ff;
+		background: $bgCoverSectionOne;
 		z-index: 0;
 		@media screen and (max-width: $LG) {
 			display: none;
@@ -21,7 +21,7 @@
 		height: 470px;
 		top: 59%;
 		right: 0%;
-		background: #7e5aff;
+		background: $bgCoverSectionTwo;
 		z-index: 0;
 		@media screen and (max-width: $LG) {
 			display: none;
@@ -82,46 +82,42 @@
 		}
 	}
 	&__subtitle {
-		color: #2c4058;
+		color: $mainTextColor;
 		font-size: 22px;
 		text-transform: uppercase;
 		padding-bottom: 20px;
 	}
 	&__text {
-		color: #7b818a;
+		position: relative;
+		color: $projectsTextColor;
 		font-family: $secondaryFont;
 		font-size: 18px;
 		padding-top: 40px;
 		max-width: 460px;
 	}
+	&__info {
+		padding-left: 10px;
+	}
+
+	&_pin::before {
+		position: absolute;
+		content: "";
+		width: 20px;
+		height: 25px;
+		left: -8px;
+		top: -6px;
+		background: url("../image/markedpin.svg");
+		background-repeat: no-repeat;
+	}
+
 	&__button {
 		margin-top: 40px;
 		margin-bottom: 60px;
 	}
-	&__info {
-		position: relative;
-	}
-	&__pin {
-		position: absolute;
-		top: 0;
-		left: 0;
-		border-radius: 50%;
-		border: 3px solid #2c4058;
-		width: 6px;
-		height: 6px;
-		&:after {
-			position: absolute;
-			content: "";
-			width: 0px;
-			height: 0px;
-			bottom: -15px;
-			left: -2px;
-			border: 5px solid transparent;
-			border-top: 10px solid #2c4058;
-		}
-	}
+
 	&__address {
-		color: #2c4058;
+		position: relative;
+		color: $mainTextColor;
 		font-size: 18px;
 		font-style: italic;
 		padding-left: 20px;

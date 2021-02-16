@@ -38,7 +38,7 @@ input[type="radio"] {
 	}
 	&__link {
 		text-decoration: none;
-		color: #ffffff;
+		color: $secondaryTextColor;
 		font-weight: 400;
 		font-size: 16px;
 		position: relative;
@@ -47,13 +47,13 @@ input[type="radio"] {
 			content: "";
 			width: 7px;
 			height: 7px;
-			border: 1px solid #ffffff;
+			border: $defaultBorder;
 			border-radius: 50%;
 			left: -20px;
 			top: 5px;
 		}
 		&:hover::before {
-			background-color: #ffffff;
+			background-color: $secondaryTextColor;
 		}
 	}
 	&__button {
@@ -69,7 +69,7 @@ input[type="radio"] {
 			content: "";
 			width: 30px;
 			height: 4px;
-			background-color: #ffffff;
+			background-color: $secondaryTextColor;
 		}
 		&::before {
 			top: 5px;
@@ -113,7 +113,7 @@ input[type="radio"] {
 		}
 	}
 	&__img {
-		border: 1px solid #ffffff;
+		border: 1px solid $secondaryTextColor;
 		border-radius: 50%;
 		width: 25px;
 		height: 25px;
@@ -138,7 +138,7 @@ input[type="radio"] {
 	&__title,
 	&__text {
 		text-transform: uppercase;
-		color: #ffffff;
+		color: $secondaryTextColor;
 	}
 	&__title {
 		font-family: $mainFont;
@@ -156,18 +156,42 @@ input[type="radio"] {
 	margin-top: -80px;
 	display: flex;
 	justify-content: center;
-}
-.down {
-	padding: 10px;
-	border: 1px solid #ffffff;
-	border-radius: 50%;
+
+	&__down {
+		position: relative;
+		cursor: pointer;
+		padding: 20px;
+		border: $defaultBorder;
+		border-radius: 50%;
+
+		&::after {
+			position: absolute;
+			content: "";
+			width: 2px;
+			height: 12px;
+			background-color: $secondaryTextColor;
+			top: 40%;
+			right: 38%;
+			transform: rotate(45deg);
+		}
+		&::before {
+			position: absolute;
+			content: "";
+			width: 2px;
+			height: 12px;
+			background-color: $secondaryTextColor;
+			top: 40%;
+			left: 38%;
+			transform: rotate(-45deg);
+		}
+	}
 }
 
 //arrows settings
 .arrow:after {
 	width: 11px;
 	height: 2px;
-	background: white;
+	background: $secondaryTextColor;
 	content: "";
 	display: inline-block;
 	transform: rotate(-50deg);
@@ -176,7 +200,7 @@ input[type="radio"] {
 .arrow:before {
 	width: 12px;
 	height: 2px;
-	background: white;
+	background: $secondaryTextColor;
 	content: "";
 	display: inline-block;
 	transform: rotate(50deg);
@@ -195,7 +219,7 @@ input[type="radio"] {
 	height: 20px;
 
 	opacity: 0.25;
-	color: white;
+	color: $secondaryTextColor;
 	background-color: transparent;
 
 	-webkit-font-smoothing: antialiased;
@@ -209,6 +233,6 @@ input[type="radio"] {
 	position: absolute;
 	top: 50%;
 	opacity: 0.75;
-	color: white;
+	color: $secondaryTextColor;
 	content: "•";
 }

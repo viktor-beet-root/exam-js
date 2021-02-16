@@ -79,7 +79,7 @@ gulp.task("js:build", function () {
 					min: ".min.js",
 				},
 				exclude: ["lib"],
-				ignoreFiles: [".combo.js", "-min.js", "lib.js"],
+				ignoreFiles: [".combo.js", "*min.js", "lib.js"],
 			})
 		)
 		.pipe(gulp.dest(path.build.js))
@@ -97,11 +97,10 @@ gulp.task("js:prod", function () {
 		.pipe(
 			minify({
 				ext: {
-					src: "-debug.js",
 					min: ".min.js",
 				},
 				exclude: ["lib"],
-				ignoreFiles: [".combo.js", "-min.js", "lib.js"],
+				ignoreFiles: [".combo.js", "*min.js", "lib.js"],
 			})
 		)
 		.pipe(gulp.dest(path.build.js));
@@ -166,4 +165,4 @@ gulp.task("clean", function (callback) {
 	return rimraf(path.clean, callback);
 });
 gulp.task("default", gulp.parallel("build", "webserver", "watch"));
-gulp.task("prod", gulp.series("clean", gulp.parallel("buildProd")));
+gulp.task("gulp prod", gulp.series("clean", gulp.parallel("buildProd"))); //для запуска таски

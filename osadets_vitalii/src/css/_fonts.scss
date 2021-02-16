@@ -1,4 +1,4 @@
 @include fontFace($defaultFont, 300, normal, "../fonts/Gotham-Book");
 @include fontFace($defaultFont, 700, normal, "../fonts/Gotham-Bold");
 @include fontFace($defaultFont, 500, normal, "../fonts/Gotham-Medium");
-@include fontFace($secondaryFont, 300, normal, "../fonts/open-sans-regular");
+@include fontFace($secondaryFont, 400, normal, "../fonts/open-sans-regular");

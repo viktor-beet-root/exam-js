@@ -4,6 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>examJs</title>
+		<link rel="icon" href="./image/favicon.png" type="image/png" />
 		<link rel="preconnect" href="https://fonts.gstatic.com" />
 		<link rel="stylesheet" href="css/slick.css" />
 		<link rel="stylesheet" href="css/slick-theme.css" />
@@ -22,7 +23,7 @@
 							<img src="./image/logo.svg" alt="monticello" />
 						</a>
 					</div>
-					<div class="nav">
+					<nav class="nav">
 						<input
 							class="nav__input"
 							hidden
@@ -51,7 +52,7 @@
 								>
 							</li>
 						</ul>
-					</div>
+					</nav>
 					<div class="social">
 						<a class="social__list" href="#">
 							<svg
@@ -134,9 +135,7 @@
 					</div>
 				</div>
 				<div class="scroll">
-					<a class="down" href="#projectsid"
-						><span class="arrow"></span>
-					</a>
+					<a class="scroll__down" href="#projectsid"></a>
 				</div>
 			</div>
 		</header>
@@ -171,12 +170,12 @@
 							href="#"
 							class="projects__button button button_center"
 						>
-							<span class="button__text">More Details</span>
-							<span class="button_bg"></span>
+							<span class="button__text button_bg"
+								>More Details</span
+							>
 						</a>
 						<div class="projects__info">
-							<div class="projects__pin"></div>
-							<p class="projects__address">
+							<p class="projects__address projects_pin">
 								New York, United States - 1776 feet
 							</p>
 						</div>
@@ -195,12 +194,12 @@
 							href="#"
 							class="projects__button button button_center"
 						>
-							<span class="button__text">More Details</span>
-							<span class="button_bg"></span>
+							<span class="button__text button_bg"
+								>More Details</span
+							>
 						</a>
 						<div class="projects__info">
-							<div class="projects__pin"></div>
-							<p class="projects__address">
+							<p class="projects__address projects_pin">
 								Hong Kong - 1588 Feet
 							</p>
 						</div>
@@ -433,14 +432,13 @@
 				</div>
 				<div>
 					<a href="#" class="gallery__button button button_center">
-						<span class="button__text">See more</span>
-						<span class="button_bg"></span>
+						<span class="button__text button_bg">See more</span>
 					</a>
 				</div>
 			</div>
 		</section>
 		<!-- map -->
-		<div id="map">
+		<div id="map" class="map">
 			<script
 				defer
 				src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAXg8Ixs6QBJRtbZjj1wITM0vYuzyD9Xcg&callback=initMap"
