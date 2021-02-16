@@ -3,25 +3,27 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-top: 15px;
 
     &__bg{
         @include bgCover('../image/homeBg.png');
         position: relative;
+        height: 100vh;
     }
 
     &__wrapper {
         display: flex;
         flex-direction: column;
-        padding-top: 37px;
-        padding-bottom: 35px;
-        height: 100vh;
+        padding-top: 150px;
+        padding-bottom: 25px;
+        height: 100%;
     }
 
     & .slick-dots{
         position: absolute;
         width: 30px;
         top: 0;
-        right: calc(590px - 50vw);
+        right: calc(52% - 50vw);
         display: flex;
         flex-direction: column;
         font-size: 16px;

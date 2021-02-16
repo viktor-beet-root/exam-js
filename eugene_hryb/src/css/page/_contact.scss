@@ -1,7 +1,10 @@
 .contact{
+    margin-top: -316px;
+    margin-bottom: -164px;
+    height: 480px;
+
     &__wrapp{
         padding: 60px 60px 24px 60px;
-        margin-top: -316px;
         background-color: $contactBgColor;
         z-index: 10;
     }

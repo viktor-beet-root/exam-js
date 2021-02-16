@@ -2,6 +2,10 @@
     padding-top: 100px;
     padding-bottom: 92px;
 
+    &__bg{
+        overflow: hidden;
+    }
+
     &__title{
         font-family: $firstFont;
         font-size: 44px;
@@ -39,7 +43,7 @@
 
     }
 
-    &_img-left, &_img-right{
+    &_img{
         position: relative;
         width: 94.0298507%;
         display: inline-block;
@@ -55,21 +59,9 @@
         }
     }
 
-    &_img-left::after{
-        left: -215px;
-        background-color: $projectLeftImgBg;
-    }
 
-    &_img-right{
-        align-self: end;
-        & > &__article-img{
-            text-align: end;
-        }
-        &::after{
-            right: -215px;
-            background-color: $projectRightImgBg;
-        }
-    }
+
+
 
     &__article{
         display: flex;
@@ -80,6 +72,38 @@
 
     &__article-wrapper{
         padding: 61px 0;
+
+        &:nth-child(2n+1){
+            flex-direction: row-reverse;
+
+            .project{
+                &_img{
+                    align-self: end;
+                    & > &__article-img{
+                        text-align: end;
+                    }
+                    &::after{
+                        right: -215px;
+                        background-color: $projectRightImgBg;
+                    }
+                }
+
+                &__article-img-wrapper{
+                    display: flex;
+                    justify-content: end;
+                }
+            }
+        }
+
+        &:nth-child(2n){
+
+            .project{
+                &_img::after{
+                    left: -215px;
+                    background-color: $projectLeftImgBg;
+                }
+            }
+        }
     }
 
     &__article-pre-title{
