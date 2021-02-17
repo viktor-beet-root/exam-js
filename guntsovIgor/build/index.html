@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta http-equiv="X-UA-Compatible" content="IE=7" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <title>Monticello</title>
         <link rel="shortcut icon" href="./images/favicon.ico" type="image/x-icon" />
         <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css" />
@@ -55,38 +55,42 @@
             <a class="header__scroll" href="#anchor_projects"> </a>
         </header>
         <main class="main">
-            <div class="container projects" id="anchor_projects">
+            <section class="container projects" id="anchor_projects">
                 <h2 class="projects__title">WHAT WE DO</h2>
 
-                <div class="projects__left">
-                    <div class="projects__photo"><img src="./images/WWD.png" alt="#" /></div>
+                <div class="projects__item">
                     <section class="projects__description description">
-                        <div class="description__title">
-                            <p class="description__title-small">One World</p>
-                            <h3 class="description__title-big">Trade Center</h3>
+                        <div class="projects__photo"><img src="./images/WWD.png" alt="#" /></div>
+                        <div class="description__info">
+                            <div class="description__title">
+                                <p class="description__title-small">One World</p>
+                                <h3 class="description__title-big">Trade Center</h3>
+                            </div>
+                            <div class="description__text">Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</div>
+                            <div class="description__details"><a class="description__details-btn" href="#">MORE DETAILS</a></div>
+                            <div class="description__address">New York City, United States - 1776 feet</div>
                         </div>
-                        <div class="description__text">Increasing prosperity in our lives can be accomplished by having the right frame of mind. The truth is, our thoughts are very powerful.</div>
-                        <div class="description__details"><a class="description__details-btn" href="#">MORE DETAILS</a></div>
-                        <div class="description__address">New York City, United States - 1776 feet</div>
                     </section>
                 </div>
 
-                <div class="projects__right">
+                <div class="projects__item">
                     <section class="projects__description description">
-                        <div class="description__title">
-                            <p class="description__title-small">International</p>
-                            <h3 class="description__title-big">Commerce Centre</h3>
+                        <div class="projects__photo"><img src="./images/house.png" alt="#" /></div>
+                        <div class="description__info">
+                            <div class="description__title">
+                                <p class="description__title-small">International</p>
+                                <h3 class="description__title-big">Commerce Centre</h3>
+                            </div>
+                            <div class="description__text">
+                                Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.
+                            </div>
+                            <div class="description__details"><a class="description__details-btn" href="#">MORE DETAILS</a></div>
+                            <div class="description__address"> Hong Kong - 1588 Feet</div>
                         </div>
-                        <div class="description__text">
-                            Successful businesses have many things in common, today we’ll look at the big ‘R’ of recognition and how a digital advertising network may help.
-                        </div>
-                        <div class="description__details"><a class="description__details-btn" href="#">MORE DETAILS</a></div>
-                        <div class="description__address"> Hong Kong - 1588 Feet</div>
                     </section>
-                    <div class="projects__photo"><img src="./images/house.png" alt="#" /></div>
                 </div>
-            </div>
-            <div class="news" id="anchor_news">
+            </section>
+            <section class="news" id="anchor_news">
                 <div class="container">
                     <h2 class="news__title">latest news</h2>
                     <div class="news__gallery">
@@ -146,8 +150,8 @@
                         </section>
                     </div>
                 </div>
-            </div>
-            <div class="gallery">
+            </section>
+            <section class="gallery">
                 <div class="container">
                     <h2 class="gallery__title">gallery</h2>
 
@@ -166,27 +170,12 @@
                             </div>
                         </div>
                     </div>
-                    <div class="gallery__carousel hidden">
-                        <div class="gallery__carousel-main">
-                            <a href="images/gall1.jpg" data-lightbox="roadtrip" data-title="NY"><img class="gallery__carousel-image1" src="images/gall1.jpg" alt="photo1" /></a>
-                        </div>
-                        <div class="gallery__carousel-secondary">
-                            <div>
-                                <a href="images/gall2.jpg" data-lightbox="roadtrip" data-title="LA"><img class="gallery__carousel-image2" src="images/gall2.jpg" alt="photo2" /></a>
-                                <a href="images/gall3.jpg" data-lightbox="roadtrip" data-title="SF"><img class="gallery__carousel-image3" src="images/gall3.jpg" alt="photo3" /></a>
-                            </div>
-                            <div>
-                                <a href="images/gall4.jpg" data-lightbox="roadtrip" data-title="TX"><img class="gallery__carousel-image4" src="images/gall4.jpg" alt="photo4" /></a>
-                                <a href="images/gall5.jpg" data-lightbox="roadtrip" data-title="Mayami"><img class="gallery__carousel-image5" src="images/gall5.jpg" alt="photo5" /></a>
-                            </div>
-                        </div>
-                    </div>
 
                     <div class="gallery__details"><a class="gallery__details-btn" href="#">see more</a></div>
                 </div>
-            </div>
-            <div id="map"></div>
-            <div class="footer">
+            </section>
+            <section id="map"></section>
+            <footer class="footer">
                 <div class="container">
                     <div class="footer__contact contact" id="anchor_contact">
                         <h2 class="contact__title">get in touch</h2>
@@ -233,7 +222,7 @@
                         </p>
                     </div>
                 </div>
-            </div>
+            </footer>
         </main>
 
         <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDzGorAB7mWblWt47rE9zVatHfwyVZfc1M&callback=initMap"></script>

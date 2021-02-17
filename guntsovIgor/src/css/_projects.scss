@@ -9,7 +9,6 @@
         text-align: center;
         margin-bottom: 170px;
         position: relative;
-        font-family: c
 
         &:before {
             position: absolute;
@@ -22,13 +21,14 @@
         }
     }
 
-    &__left,
-    &__right {
-        display: flex;
-        justify-content: space-between;
+    &__item {
         margin-bottom: 210px;
 
-        
+        &:nth-child(3) {
+            & .projects__photo {
+                order: 1;
+            }
+        }
     }
 
     &__photo:first-child {
@@ -55,13 +55,18 @@
             background-color: #7e5aff;
             z-index: -1;
             top: -70px;
-            right: -150px;
+            right: -20px;
         }
     }
 }
 
 .description {
-    max-width: 460px;
+    display: flex;
+    justify-content: space-between;
+
+    &__info {
+        max-width: 460px;
+    }
 
     &__title {
         text-transform: uppercase;
@@ -123,9 +128,8 @@
 }
 
 @media (max-width: 992px) {
-    .projects__left, .projects__right 
-
-        {
+    .projects__left,
+    .projects__right {
         display: block;
     }
 
