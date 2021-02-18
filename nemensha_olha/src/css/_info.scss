@@ -1,0 +1,125 @@
+.info {
+    max-width: 770px;
+    box-shadow: 0 -4px 30px rgba(133, 133, 133, 0.2);
+    background-color: $infoBgc;
+    @include bgCover('../image/city@2x.png');
+    background-position: center bottom;
+    background-size: contain;
+    background-repeat: none;
+    margin: -300px auto 0;
+    padding: 85px 60px 80px;
+    position: relative;
+    z-index: 10;
+    @media (max-width: 1200px) {
+        padding: 50px;
+        margin: -200px auto 0;
+    }
+    @media (max-width: 992px) {
+        padding: 40px;
+        margin: -100px auto 0;
+    }
+    @media (max-width: 768px) {
+        padding: 30px;
+        margin: -80px auto 0;
+    }
+    @media (max-width: 576px) {
+        padding: 20px;
+        margin: -80px auto 0;
+    }
+    &__item {
+        color: $itemColor;
+        font-size: 44px;
+        font-weight: 500;
+        line-height: 22px;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 50px;
+        @media (max-width: 1200px) {
+            font-size: 40px;
+            padding-bottom: 40px;
+        }
+        @media (max-width: 992px) {
+            font-size: 35px;
+            padding-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            font-size: 30px;
+            padding-bottom: 20px;
+        }
+        @media (max-width: 576px) {
+            font-size: 25px;
+            padding-bottom: 10px;
+        }
+    }
+    &__block {
+        display: flex;
+        @media (max-width: 576px) {
+            display: block;
+        }
+    }
+    &__text {
+        color: $itemColor;
+        font-size: 18px;
+        font-weight: 300;
+        font-style: normal;
+        letter-spacing: normal;
+        line-height: 34px;
+        text-align: left;
+        @media (max-width: 992px) {
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+    &__text_adr {
+        width: 288px;
+        padding-left: 10px;
+    }
+    &__form {
+        margin-left: 55px;
+        @media (max-width: 1200px) {
+            margin-left: 45px;
+        }
+        @media (max-width: 992px) {
+            margin-left: 40px;
+        }
+        @media (max-width: 768px) {
+            margin-left: 30px;
+        }
+        @media (max-width: 576px) {
+            margin-left: 0;
+        }
+    }
+    &__form_input::placeholder {
+        color: $placeholder;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        @media (max-width: 992px) {
+            font-size: 16px;
+        }
+        @media (max-width: 768px) {
+            font-size: 14px;
+        }
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+    &__form_input {
+        padding: 15px 1px;
+        width: 310px;
+        border: none;
+        border-bottom: solid 1px $placeholder;
+    }
+    &__form_input:focus::placeholder {
+        color: $itemColor;
+    }
+    &__form_input:focus {
+        border-bottom: solid 1px $itemColor;
+    }
+}

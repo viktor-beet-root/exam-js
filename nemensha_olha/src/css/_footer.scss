@@ -1,0 +1,54 @@
+.footer {
+    @include bgCover('../image/Bg (2).png');
+    padding-bottom: 205px;
+    &__center {
+        max-width: 770px;
+        margin: 55px auto 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__icons {
+        max-width: 170px;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__icon {
+        fill: $iconFill;
+        height: 15px;
+        height: 15px;
+        @media (max-width: 576px) {
+            height: 12px;
+            height: 12px;
+        }
+    }
+    &__down {
+        max-width: 770px;
+        margin: 0 auto;
+        padding-top: 40px;
+        display: flex;
+    }
+    &__down span {
+        padding: 0 22px;
+    }
+    &__text_icon {
+        fill: $iconFill;
+        margin: 0 5px;
+    }
+    &__text {
+        font-size: 14px;
+        font-weight: 400;
+        @media (max-width: 576px) {
+            font-size: 10px;
+        }
+    }
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: solid 1px $iconBorder;
+}

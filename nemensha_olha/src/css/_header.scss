@@ -1,0 +1,187 @@
+.header {
+    @include bgCover('../image/Bg.png');
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    &__logo {
+        padding-right: 88px;
+    }
+    &__menu {
+        margin-top: 10px;
+        max-width: 600px;
+    }
+}
+
+#navbar {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    max-width: 1170px;
+    background-color: $navBarColor;
+    z-index: 100;
+}
+
+.menu {
+    margin: 0 auto;
+    max-width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    &__list {
+        display: flex;
+        justify-content: space-around;
+        @media (max-width: 992px) {
+            display: none;
+            position: absolute;
+            right: 0;
+            z-index: 1;
+        }
+    }
+    &__item {
+        padding-right: 65px;
+    }
+    &__link:before {
+        content: '';
+        position: absolute;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        border: solid 1px $menuDots;
+        z-index: 100;
+        top: 4px;
+        left: -20px;
+    }
+    &__link:hover:before {
+        background-color: $menuHover;
+    }
+    &__link {
+        position: relative;
+        text-decoration: none;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 22px;
+        text-align: left;
+        text-transform: uppercase;
+        color: $textColor;
+    }
+    &__link:hover {
+        color: $menuLinkHover;
+    }
+}
+
+.header__icons {
+    display: flex;
+    justify-content: space-around;
+    @media (max-width: 992px) {
+        display: none;
+    }
+}
+
+.icons {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    border: solid 1px $iconBorder;
+    margin-right: 20px;
+}
+
+.header__icon {
+    fill: $iconFill;
+    height: 15px;
+    width: 15px;
+}
+
+.main_block {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1;
+    position: relative;
+}
+
+.main__item {
+    padding-top: 50px;
+    font-size: 80px;
+    font-weight: 700;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    @media (max-width: 992px) {
+        font-size: 60px;
+    }
+    @media (max-width: 768px) {
+        font-size: 40px;
+    }
+    @media (max-width: 576px) {
+        font-size: 25px;
+        letter-spacing: 2px;
+    }
+}
+
+.main__text {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 22px;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 5.4px;
+    padding-top: 50px;
+    @media (max-width: 768px) {
+        font-size: 14px;
+        letter-spacing: 3px;
+    }
+    @media (max-width: 576px) {
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+}
+
+.scrooll {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: 1px solid $scrollBorder;
+    opacity: 0.7;
+    margin: 0 auto;
+    position: absolute;
+    cursor: pointer;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 50px;
+}
+
+.scrooll:before {
+    position: absolute;
+    content: '';
+    height: 4px;
+    border: 1px solid $scrollBorder;
+    transform: skewX(-45deg);
+    top: 20px;
+    left: 20px;
+}
+
+.scrooll:after {
+    position: absolute;
+    content: '';
+    height: 4px;
+    border: 1px solid $scrollBorder;
+    transform: skewX(45deg);
+    top: 20px;
+    left: 15px;
+}
+
+.scrooll:hover {
+    border: 2px solid $scrollBorderHover;
+}
+
+.scrooll:hover:before,
+.scrooll:hover:after {
+    border: 1px solid $scrollBorderHover;
+}

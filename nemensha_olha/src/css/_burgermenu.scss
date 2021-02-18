@@ -1,0 +1,62 @@
+.menu__btn {
+    margin-top: 28px;
+    width: 30px;
+    height: 30px;
+    display: none;
+    position: relative;
+    cursor: pointer;
+    @media (max-width: 992px) {
+        display: block;
+    }
+}
+
+.menu__burger,
+.menu__btn::before,
+.menu__btn::after {
+    content: '';
+    background-color: $btnBgc;
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    right: 15px;
+    top: -15px;
+    transition: .3s ease-in-out;
+}
+
+.menu__btn::before {
+    top: 0;
+}
+
+.menu__btn::after {
+    bottom: 0;
+}
+
+.menu__burger {
+    top: 13px;
+}
+
+@media (max-width:992px) {
+    .menu__input:checked {
+        &~.menu__list {
+            display: block;
+        }
+        &+.menu__btn .menu__burger {
+            background-color: transparent;
+        }
+        &+.menu__btn::before {
+            top: 13px;
+            transform: rotate(45deg);
+        }
+        &+.menu__btn::after {
+            top: 13px;
+            transform: rotate(-45deg);
+        }
+    }
+    .menu__list {
+        width: 100%;
+        text-align: center;
+        background-color: $menuListBgc;
+        transform: translateY(-5%);
+        transition: .3s ease-in-out;
+    }
+}
