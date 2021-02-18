@@ -84,7 +84,7 @@ gulp.task("js:build", function () {
                 min: '.min.js'
             },
             exclude: ['lib'],
-            ignoreFiles: ['.combo.js', '-min.js', 'lib.js']
+            ignoreFiles: ['.combo.js', '.min.js', 'lib.js']
         }))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({
@@ -99,11 +99,10 @@ gulp.task("js:prod", function () {
         }))
         .pipe(minify({
             ext: {
-                src: '-debug.js',
                 min: '.min.js'
             },
             exclude: ['lib'],
-            ignoreFiles: ['.combo.js', '-min.js', 'lib.js']
+            ignoreFiles: ['.combo.js', '.min.js', 'lib.js']
         }))
         .pipe(gulp.dest(path.build.js));
 });

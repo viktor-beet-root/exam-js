@@ -1,5 +1,6 @@
 .header {
     background-image: url(../image/bg_footer1.jpg);
+    transition: background-image .5s ease-in-out;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: top center;
@@ -19,6 +20,7 @@
         border-radius: 50%;
         border: 1px solid $textColorWhite;
         padding-bottom: 4px;
+        animation: bounce 2s infinite ease-in-out;
 
         &-arrow {
             width: 6px;
@@ -28,17 +30,23 @@
             border-left: transparent;
             transform: rotate(45deg);
         }
+    }
 
-        &:hover {
-            transform: translate(-20px, 20px);
-            transition: transform .5s ease-in-out;
+    @keyframes bounce {
+
+        from,
+        to {
+            bottom: 0px;
+        }
+
+        40%,
+        60% {
+            bottom: 50px;
         }
     }
 
     &__slider {
         width: 100%;
-
-
 
         &-items {
             text-align: center;
@@ -101,7 +109,7 @@
             font-size: 50px;
         }
 
-        @media screen and (max-width: 350px) {
+        @media screen and (max-width: $verySmall) {
             font-size: 40px;
         }
     }
@@ -117,7 +125,7 @@
             font-size: 16px;
         }
 
-        @media screen and (max-width: 350px) {
+        @media screen and (max-width: $verySmall) {
             font-size: 14px;
         }
     }

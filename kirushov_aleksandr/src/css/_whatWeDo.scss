@@ -32,8 +32,12 @@
             bottom: 259px;
         }
 
-        @media screen and (max-width: $SM) {
-            bottom: 0;
+        @media screen and (max-width: $LG) {
+            bottom: 646px;
+        }
+
+        @media screen and (max-width: $MD) {
+            bottom: 542px;
         }
     }
 
@@ -109,15 +113,29 @@
         &-location {
             margin-top: 52px;
             font-style: italic;
+            position: relative;
+            padding-left: 19px;
+
+            &::before {
+                content: url(../image/location01.svg);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
         }
 
         &-img {
             display: block;
             width: 94.0321%;
 
-            &-commerce {
-                margin-left: 6%;
+            &-wrapp {
+                display: flex;
+                justify-content: flex-end;
             }
+
+            // &-commerce {
+            //     margin-left: 6%;
+            // }
         }
 
         &-trade {
@@ -126,6 +144,11 @@
             @media screen and (max-width: $LG) {
                 margin-bottom: 0px;
             }
+        }
+
+        &-commerce {
+            display: flex;
+            flex-direction: row-reverse;
         }
     }
 }

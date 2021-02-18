@@ -89,7 +89,7 @@
                 padding: 69px 40px 45px;
             }
 
-            @media screen and (max-width: 350px) {
+            @media screen and (max-width: $verySmall) {
                 padding: 69px 15px 45px;
             }
         }
@@ -194,7 +194,7 @@
                 font-size: 14px;
                 background-color: transparent;
 
-                @media screen and (max-width: 350px) {
+                @media screen and (max-width: $verySmall) {
                     width: 100%;
                 }
 

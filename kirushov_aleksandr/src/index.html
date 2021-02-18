@@ -135,18 +135,17 @@
                                     <span class="whatWeDo__content-btn-text">More details</span>
                                 </a>
                                 <p class="whatWeDo__content-location">
-                                    <svg aria-hidden="true" focusable="false" width="12px" height="17px" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                        <path fill="#2C4058"
-                                            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
-                                        </path>
-                                    </svg>
-                                    New York City, United States - 1776 feet</p>
+                                    New York City, United States - 1776 feet
+                                </p>
                             </div>
                         </div>
                     </div>
-                    <div class="whatWeDo__content whatWeDo__content-commerce">
-                        <div class="row">
+                    <div class="whatWeDo__content">
+                        <div class="row whatWeDo__content-commerce">
+                            <div class="col-7 col-xl-8 col-lg-12 whatWeDo__content-img-wrapp">
+                                <img class="whatWeDo__content-img whatWeDo__content-img-commerce"
+                                    src="image/about02.jpg" alt="picture">
+                            </div>
                             <div class="col-5 col-xl-4 col-lg-12">
                                 <h3 class="whatWeDo__content-title">International</h3>
                                 <h2 class="whatWeDo__content-title2">Commerce Centre</h2>
@@ -157,18 +156,10 @@
                                 <a class="whatWeDo__content-btn" href="#"><span class="whatWeDo__content-btn-text">More
                                         details</span></a>
                                 <p class="whatWeDo__content-location">
-                                    <svg aria-hidden="true" focusable="false" width="12px" height="17px" role="img"
-                                        xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512">
-                                        <path fill="#2C4058"
-                                            d="M172.268 501.67C26.97 291.031 0 269.413 0 192 0 85.961 85.961 0 192 0s192 85.961 192 192c0 77.413-26.97 99.031-172.268 309.67-9.535 13.774-29.93 13.773-39.464 0zM192 272c44.183 0 80-35.817 80-80s-35.817-80-80-80-80 35.817-80 80 35.817 80 80 80z">
-                                        </path>
-                                    </svg>
-                                    Hong Kong - 1588 Fee</p>
+                                    Hong Kong - 1588 Feet
+                                </p>
                             </div>
-                            <div class="col-7 col-xl-8 col-lg-12">
-                                <img class="whatWeDo__content-img whatWeDo__content-img-commerce"
-                                    src="image/about02.jpg" alt="picture">
-                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -177,8 +168,8 @@
                 <div class="container">
                     <h2 class="news__title">latest news</h2>
                     <div class="row">
-                        <ul class="news__list col-12">
-                            <li class="news__item">
+                        <div class="news__list col-12">
+                            <div class="news__item">
                                 <a href="" class="news__link">
                                     <div class="news__img-wrapp">
                                         <img src="image/news01.jpg" alt="foto" class="news__img">
@@ -202,8 +193,8 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                            <li class="news__item">
+                            </div>
+                            <div class="news__item">
                                 <a href="" class="news__link">
                                     <div class="news__img-wrapp">
                                         <img src="image/news02.jpg" alt="foto" class="news__img">
@@ -227,8 +218,8 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                            <li class="news__item">
+                            </div>
+                            <div class="news__item">
                                 <a href="" class="news__link">
                                     <div class="news__img-wrapp">
                                         <img src="image/news03.jpg" alt="foto" class="news__img">
@@ -253,8 +244,8 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                            <li class="news__item">
+                            </div>
+                            <div class="news__item">
                                 <a href="№" class="news__link">
                                     <div class="news__img-wrapp">
                                         <img src="image/news01.jpg" alt="foto" class="news__img">
@@ -279,8 +270,8 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                            <li class="news__item">
+                            </div>
+                            <div class="news__item">
                                 <a href="" class="news__link">
                                     <div class="news__img-wrapp">
                                         <img src="image/news02.jpg" alt="foto" class="news__img">
@@ -305,8 +296,8 @@
                                         </div>
                                     </div>
                                 </a>
-                            </li>
-                        </ul>
+                            </div>
+                        </div>
                         <div class="news__slider-dots"></div>
                     </div>
                 </div>
@@ -398,151 +389,6 @@
             </section>
             <section class="maps">
                 <div class="maps__map" id="map">
-                    <script>
-                        function initMap() {
-                            const cords = {
-                                lat: 50.41230533423103,
-                                lng: 30.544846627880688
-                            };
-                            const map = new google.maps.Map(document.getElementById('map'), {
-                                center: cords,
-                                zoom: 11,
-
-                                styles: [{
-                                        "elementType": "geometry",
-                                        "stylers": [{
-                                            "color": "#e8e8e8"
-                                        }]
-                                    },
-                                    {
-                                        "elementType": "labels.icon",
-                                        "stylers": [{
-                                            "visibility": "off"
-                                        }]
-                                    },
-                                    {
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [{
-                                            "color": "#616161"
-                                        }]
-                                    },
-                                    {
-                                        "elementType": "labels.text.stroke",
-                                        "stylers": [{
-                                            "color": "#f5f5f5"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "administrative.land_parcel",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [{
-                                            "color": "#908989"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "poi",
-                                        "elementType": "geometry",
-                                        "stylers": [{
-                                            "color": "#eeeeee"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "poi",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [{
-                                            "color": "#757575"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "poi.park",
-                                        "elementType": "geometry",
-                                        "stylers": [{
-                                            "color": "#8C8C87"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "poi.park",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [{
-                                            "color": "#9e9e9e"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "road",
-                                        "elementType": "geometry",
-                                        "stylers": [{
-                                            "color": "#ffffff"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "road.arterial",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [{
-                                            "color": "#757575"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "road.highway",
-                                        "elementType": "geometry",
-                                        "stylers": [{
-                                            "color": "#dadada"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "road.highway",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [{
-                                            "color": "#616161"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "road.local",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [{
-                                            "color": "#9e9e9e"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "transit.line",
-                                        "elementType": "geometry",
-                                        "stylers": [{
-                                            "color": "#e5e5e5"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "transit.station",
-                                        "elementType": "geometry",
-                                        "stylers": [{
-                                            "color": "#eeeeee"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "water",
-                                        "elementType": "geometry",
-                                        "stylers": [{
-                                            "color": "#c9c9c9"
-                                        }]
-                                    },
-                                    {
-                                        "featureType": "water",
-                                        "elementType": "labels.text.fill",
-                                        "stylers": [{
-                                            "color": "#9e9e9e"
-                                        }]
-                                    }
-                                ]
-                            });
-
-                            const marker = new google.maps.Marker({
-                                position: {
-                                    lat: 50.45866512019024,
-                                    lng: 30.518067452139135
-                                },
-                                map: map,
-                                icon: './image/marker.png',
-                            })
-                        };
-                    </script>
                     <script defer
                         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBIrn05IemTe8wCfU2Eevsr8ikGrHhecz8&callback=initMap">
                     </script>
@@ -619,7 +465,7 @@
         </footer>
         <script src="js/jquery.min.js"></script>
         <script src="js/slick.min.js"></script>
-        <script src="js/script.min.js"></script>
         <script src="js/lightbox-min.js"></script>
+        <script src="js/script.min.js"></script>
     </body>
 </html>
