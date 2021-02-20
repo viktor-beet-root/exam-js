@@ -1,0 +1,274 @@
+.header {
+    background-image: url(../images/header_bg.jpg);
+    background-size: cover;
+    height: 1070px;
+    
+    &__container {
+        background-image: linear-gradient(45deg, rgba($color-bg-first, .9) 0%, rgba($color-bg-second, .9) 100%);
+        height: 800px;
+        padding: 50px 0;
+        position: relative;
+    }
+
+    &__menu {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @media (max-width: $LG ) {
+            flex-direction: column;
+            height: 200px;
+        }
+
+        @media (max-width: $SM ) {
+            flex-direction: row;
+            height: 200px;
+        }
+    }
+
+    &__list {
+        display: flex;
+        justify-content: space-between;
+        padding: 0 20px;
+        
+            @media (max-width: $SM) {         
+            display: block;
+            width: 0;
+            visibility: hidden;
+            pointer-events: none;
+            opacity: 1;
+            position: absolute;
+            top: 20px;
+            left: 0;
+            text-align: center;
+            transform: translateY(-1000px);
+            transition: all 0.3s ease-in-out;
+            text-align: center;
+            }
+}
+
+    &__item {
+        &:not(:last-child){
+            margin-right: 70px;
+
+            @media (max-width: $MD ) {
+        margin-right: 0;
+            }
+        }  
+    }
+
+    &__link {
+        position: relative;
+        font-size: 14px;
+        font-weight: 300;
+        text-transform: uppercase;
+        
+        &:hover {
+            &::before {
+                background-color: #fff;
+            }
+        }
+
+        &:active {
+            &::before {
+                background-color: #fff;
+            }
+        }
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 2px;
+            left: -25px;
+            width: 9px;
+            height: 9px;
+            border: 1px solid $color-white;
+            border-radius: 50%;
+            transition: .2s all ease;
+        }
+    }
+
+    &__info {
+
+        margin-top: 250px;
+
+        @media (max-width: $LG ) {
+           margin-top: 150px;
+             }
+        
+        &_heading {
+            font-size: 80px;
+            color: $color-white;
+            font-weight: 700;
+            text-transform: uppercase;
+            text-align: center;
+            margin-bottom: 10px;
+
+            @media (max-width: $LG ) {
+                font-size: 60px;
+            }
+        }
+
+        &_text {
+            font-size: 18px;
+            color: $color-white;
+            font-weight: 300;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    &__scroll {
+        display: inline-block;
+        position: absolute;
+        bottom: 60px;
+        left: 50%;
+        font-weight: 300;
+        font-size: 18px;
+        transition: .2s all ease;
+
+        &:hover {
+            transform: scale(1.05) translateY(4px);
+        }
+
+
+        &_img {
+            @include positionCenter;
+        }
+    }
+
+    & .slick-dots {
+        position: absolute;
+        width: 30px;
+        top: 65%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+
+        & li {
+            margin-bottom: 30px;
+            position: relative;
+
+            button {
+
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                background-color: transparent;
+                color: transparent;
+                outline: none;
+                border: none;
+                cursor: pointer;
+
+                &:before{
+                    content: '';
+                    color:white;
+                    position: absolute;
+                    width: 10px;
+                    height: 10px;
+                    top: 50%;
+                    left: 50%;
+                    border: solid 1px white;
+                    border-radius: 50%;
+                    transform: translate(-50%, -50%);
+                }
+            }
+
+        }
+
+        & .slick-active button {
+
+            &:before{
+                background-color: white;
+            }
+        }
+    }
+}
+
+.navigation {
+
+    &__checkbox {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        clip: rect(0 0 0 0);
+    }
+
+    &__button {
+        display: none;
+        height: 20px;
+        width: 26px;
+        position: absolute;
+        top: 37px;
+        right: 15px;
+        z-index: 200;
+
+        @media (max-width: $SM ) {
+            display: block;
+            }
+        }
+
+        &__icon {
+            display: inline-block;
+            position: relative;
+            margin-bottom: 15px;
+            z-index: 100;
+            cursor: pointer;
+
+            &,
+            &::before,
+            &::after {
+                width: 100%;
+                height: 2px;
+                background-color: #fff;
+                display: inline-block;
+                transition: .2s;
+            }
+    
+            &::before,
+            &::after {
+                content: '';
+                position: absolute;
+                left: 0;
+            }
+    
+            &::before {top: 8px;}
+            &::after {top: -8px;}    
+        }
+    
+        &__button:hover &__icon::before {
+            top: 9px;
+        }
+    
+        &__button:hover &__icon::after {
+            top: -9px;
+        }
+    
+        &__checkbox:checked + &__button &__icon {
+            background-color: transparent;
+        }
+    
+        &__checkbox:checked + &__button &__icon::before {
+            top: 0;
+            transform: rotate(135deg);
+        }
+    
+        &__checkbox:checked + &__button &__icon::after {
+            top: 0;
+            transform: rotate(-135deg);
+        }
+}
+
+@media (max-width: $SM) {
+    
+    .navigation__checkbox:checked ~ .header__list {
+    visibility: visible;
+    pointer-events: all;
+    transform: translateY(0);
+    opacity: 1;
+    width: 100%;
+    }
+}

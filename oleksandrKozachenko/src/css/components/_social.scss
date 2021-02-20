@@ -1,0 +1,23 @@
+.social {
+
+    display: flex;
+
+    &_link {
+        position: relative;
+        transition: .2s all ease;
+
+        &:not(:last-child){
+            margin-right: 20px;
+        }
+
+        &:hover {
+            transform: scale(1.1);
+        }
+    }
+
+    &_icon {
+        @include positionCenter;
+        height: 20px;
+        fill: $color-white;
+    }
+}

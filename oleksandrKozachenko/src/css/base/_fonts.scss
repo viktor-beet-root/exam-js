@@ -1,0 +1,9 @@
+@include fontFace($default-fonts-name, '../fonts/Gotham-Book', normal, 300);
+
+@include fontFace($default-fonts-name, '../fonts/Gotham-Medium', normal, 400);
+
+@include fontFace($default-fonts-name, '../fonts/Gotham-Bold', normal, 700);
+
+@include fontFace($secondary-fonts-name, '../fonts/OpenSans-Regular', normal, 400);
+
+@include fontFace($secondary-fonts-name, '../fonts/OpenSans-Italic', italic, 400);

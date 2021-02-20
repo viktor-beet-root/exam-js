@@ -1,0 +1,55 @@
+.secondary-heading {
+    position: relative;
+    font-size: 44px;
+    font-weight: 700;
+    text-transform: uppercase;
+
+    &--space {
+        padding: 110px 0;
+
+        @media (max-width: $LG ) {
+           padding: 50px 0;
+             }
+    }
+
+    &--line {
+        &::before {
+            content: '';
+            width: 100px;
+            height: 1px;
+            border-top: 1px solid $color-white;
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translate(-50%);
+        }
+    }
+
+    &--line-dark {
+        &::before {
+            border-top: 1px solid $color-primary;
+        }
+    }
+
+
+    @media (max-width: $LG ) {
+        font-size: 26px;
+        }
+}
+
+.tertiary-heading {
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 300;
+}
+
+.paragraph {
+    font-size: $default-font-size;
+    line-height: $default-line-height;
+    font-family: $default-fonts;
+    font-weight: 300;
+
+    @media (max-width: $LG ) {
+        font-size: $small-font-size;
+        }
+}
