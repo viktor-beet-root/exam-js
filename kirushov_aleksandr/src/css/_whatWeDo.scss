@@ -1,0 +1,154 @@
+.whatWeDo {
+    padding: 105px 0 110px;
+    position: relative;
+
+    &::before,
+    &::after {
+        content: '';
+        width: 35%;
+        height: 470px;
+        position: absolute;
+        z-index: -1;
+        background-color: brown;
+    }
+
+    &::before {
+        background-color: $bgTradeBefore;
+        top: 273px;
+        left: 0;
+
+        @media screen and (max-width: $LG) {
+            top: 197px;
+        }
+
+    }
+
+    &::after {
+        background-color: $bgComerceBefore;
+        bottom: 210px;
+        right: 0;
+
+        @media screen and (max-width: $XL) {
+            bottom: 259px;
+        }
+
+        @media screen and (max-width: $LG) {
+            bottom: 646px;
+        }
+
+        @media screen and (max-width: $MD) {
+            bottom: 542px;
+        }
+    }
+
+    &__heading {
+        text-align: center;
+        font-size: 44px;
+        color: $colorTitleWhatWe;
+        font-family: $secondary-fonts;
+        font-weight: bold;
+        text-transform: uppercase;
+        position: relative;
+        margin-bottom: 65px;
+
+
+        &::before {
+            content: '';
+            top: -21px;
+            left: 50%;
+            transform: translateX(-50%);
+            position: absolute;
+            width: 100px;
+            height: 1px;
+            background-color: $pickledBluewood;
+        }
+    }
+
+    &__content {
+        padding-top: 70px;
+
+        @media screen and (max-width: $LG) {
+            padding-top: 0;
+        }
+
+        &-title,
+        &-title2 {
+            color: $colorTitleWhatWe;
+            font-family: $secondary-fonts;
+            text-transform: uppercase;
+        }
+
+        &-title {
+            font-size: 22px;
+            margin-top: 48px;
+
+            &2 {
+                font-size: 44px;
+                text-transform: uppercase;
+                font-weight: 700;
+                line-height: 1.09;
+                margin-bottom: 24px;
+            }
+        }
+
+        &-btn {
+            margin-top: 32px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-decoration: none;
+            width: 190px;
+            height: 50px;
+            border: 1px solid $colorTitleWhatWe;
+
+            &-text {
+                text-transform: uppercase;
+                font-size: 14px;
+                color: $colorTitleWhatWe;
+                font-family: $secondary-fonts;
+                font-weight: 600;
+            }
+        }
+
+        &-location {
+            margin-top: 52px;
+            font-style: italic;
+            position: relative;
+            padding-left: 19px;
+
+            &::before {
+                content: url(../image/location01.svg);
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &-img {
+            display: block;
+            width: 94.0321%;
+
+            &-wrapp {
+                display: flex;
+                justify-content: flex-end;
+            }
+
+            // &-commerce {
+            //     margin-left: 6%;
+            // }
+        }
+
+        &-trade {
+            margin-bottom: 110px;
+
+            @media screen and (max-width: $LG) {
+                margin-bottom: 0px;
+            }
+        }
+
+        &-commerce {
+            display: flex;
+            flex-direction: row-reverse;
+        }
+    }
+}

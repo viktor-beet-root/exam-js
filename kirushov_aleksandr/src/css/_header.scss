@@ -1,0 +1,132 @@
+.header {
+    background-image: url(../image/bg_footer1.jpg);
+    transition: background-image .5s ease-in-out;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: top center;
+    background-color: $bgColorHeader;
+    height: 100vh;
+
+    &__scroll {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 40px;
+        height: 40px;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 50px;
+        border-radius: 50%;
+        border: 1px solid $textColorWhite;
+        padding-bottom: 4px;
+        animation: bounce 2s infinite ease-in-out;
+
+        &-arrow {
+            width: 6px;
+            height: 6px;
+            border: 1px solid $textColorWhite;
+            border-top: transparent;
+            border-left: transparent;
+            transform: rotate(45deg);
+        }
+    }
+
+    @keyframes bounce {
+
+        from,
+        to {
+            bottom: 0px;
+        }
+
+        40%,
+        60% {
+            bottom: 50px;
+        }
+    }
+
+    &__slider {
+        width: 100%;
+
+        &-items {
+            text-align: center;
+
+            &:not(:first-child) {
+                visibility: hidden;
+            }
+
+            .slick-initialized & {
+                visibility: visible;
+            }
+        }
+
+        &-wrapp {
+            display: flex;
+            align-items: center;
+            height: 100%;
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        right: 50px;
+        height: 100px;
+
+        @media screen and (max-width: $SM) {
+            right: 30px;
+        }
+
+        & .slick-dots li button:before {
+            content: '';
+            width: 5px;
+            height: 5px;
+            border: 1px solid $textColorWhite;
+            border-radius: 50%;
+            opacity: 1;
+        }
+
+        & .slick-dots li.slick-active button:before {
+            background-color: $textColorWhite;
+        }
+
+        & .slick-dots li button:hover:before {
+            opacity: .5;
+        }
+    }
+
+    &__title {
+        color: $textColorWhite;
+        font-family: $secondary-fonts;
+        font-size: 80px;
+        line-height: 1.2;
+        letter-spacing: 4px;
+        font-weight: 700;
+        text-transform: uppercase;
+
+        @media screen and (max-width: $SM) {
+            font-size: 50px;
+        }
+
+        @media screen and (max-width: $verySmall) {
+            font-size: 40px;
+        }
+    }
+
+    &__text {
+        color: $textColorWhite;
+        font-family: $secondary-fonts;
+        letter-spacing: 5.2px;
+        text-transform: uppercase;
+        margin-top: 13px;
+
+        @media screen and (max-width: $SM) {
+            font-size: 16px;
+        }
+
+        @media screen and (max-width: $verySmall) {
+            font-size: 14px;
+        }
+    }
+}
