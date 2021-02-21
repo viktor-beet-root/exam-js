@@ -1,0 +1,29 @@
+.copyrights{
+    padding-top: 36px;
+
+    &__text{
+        color: $copyrightsColorText;
+        font-family: $firstFont;
+        font-size: 14px;
+        font-weight: 400;
+        letter-spacing: -1px;
+
+        &:nth-child(1n + 2){
+            border-left: 1px solid $copyrightsColorText;
+            padding-left: 20px;
+            letter-spacing: .6px;
+        }
+
+        &:nth-child(1n - 2){
+            padding-right: 20px;
+
+        }
+    }
+
+    &__icon{
+        display: inline-block;
+        height: .8em;
+        width: 1em;
+        fill: $copyrightsColorText;
+    }
+}

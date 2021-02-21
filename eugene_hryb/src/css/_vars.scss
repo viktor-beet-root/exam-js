@@ -1,0 +1,72 @@
+//Типография
+
+$firstFontName: 'Gotham';
+$secondFontName: 'Open Sans';
+$follbak: Arial,
+Helvetica,
+sans-serif;
+
+$firstFont: $firstFontName,
+$follbak;
+$secondFont: $secondFontName,
+$follbak;
+
+$defaultFont: $firstFont;
+//Цвета
+
+$white:#ffffff;
+$pickledBluewood: #2C4058;
+$riverBed: #4b5562;
+$malibu: #55b7ff;
+$heliotrope: #7e5aff;
+$cornflowerBlue: #7e5cfd;
+$tundora: #4b4b4b;
+
+//header
+$headerFontColor: $white;
+
+//social-list
+
+$socialListFontColor: $white;
+
+//menu
+
+$menuFontColor: $white;
+
+//home
+
+$homeFontColor: $white;
+
+//project
+
+$projectTitleColor: $pickledBluewood;
+$projectTexteColor: $pickledBluewood;
+$projectLeftImgBg: $malibu;
+$projectRightImgBg: $cornflowerBlue;
+
+//pop-up
+
+$popUpColor: $white;
+$popUpTextColor: $pickledBluewood;
+
+
+
+// news
+
+$newsTextColor: $white;
+$newsTextArticleColor :$pickledBluewood;
+$newsDataColor: $malibu;
+
+//gallery
+
+$galleryTitleColor: $pickledBluewood;
+
+//contact
+
+$contactSymbolColor: $heliotrope;
+$contactTextColor: $pickledBluewood;
+$contactBgColor: $white;
+
+//footer
+
+$copyrightsColorText: $white;

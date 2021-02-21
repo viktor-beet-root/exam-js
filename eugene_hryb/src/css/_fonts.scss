@@ -1,0 +1,9 @@
+@include fontFace($secondFontName, '../fonts/Gotham-Bold', normal, 700);
+
+@include fontFace($secondFontName, '../fonts/Gotham-Medium', normal, 600);
+
+@include fontFace($secondFontName, '../fonts/Gotham-Book', normal, 400);
+
+@include fontFace($firstFontName, './fonts/open-sans-v18-latin-italic', italic, 400);
+
+@include fontFace($firstFontName, './fonts/open-sans-v18-latin-regular', normal, 400);

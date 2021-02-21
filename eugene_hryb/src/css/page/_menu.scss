@@ -1,0 +1,47 @@
+.menu{
+    padding-left: 36px;
+    padding-right: 51px;
+
+    &__list{
+        height: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__item{
+        text-align: center;
+
+        &:hover::before{
+            background-color: $menuFontColor;
+        }
+
+        &::before{
+            content: '';
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            border: 1px solid $menuFontColor;
+            border-radius: 50%;
+            box-sizing: content-box;
+            margin-right: 15px;
+            transition: background-color .5s ease-in-out;
+
+
+        }
+    }
+
+    &_mark-item{
+        &::before{
+            background-color: $menuFontColor;
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: $firstFont;
+        color: $menuFontColor;
+    }
+}
