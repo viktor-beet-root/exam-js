@@ -1,0 +1,122 @@
+.footer {
+    background: url("../images/bg_btm.png") no-repeat;
+    background-size: cover;
+    position: relative;
+    min-height: 520px;
+
+    &__nav {
+        display: flex;
+        justify-content: space-between;
+        max-width: 770px;
+        margin: 0 auto 40px;
+    }
+
+    &__madeby {
+        max-width: 770px;
+        margin: 0 auto;
+        color: $headerColor;
+    }
+}
+
+.contact {
+    background: $headerColor url("../images/bg_contact.png") no-repeat;
+    background-position: bottom;
+    width: 770px;
+    margin: -315px auto 60px;
+    padding: 80px 60px;
+
+    &__title {
+        text-transform: uppercase;
+        font-size: 44px;
+        color: $textColor;
+        position: relative;
+        text-align: center;
+        margin-bottom: 55px;
+        font-family: $secondaryMainFont;
+
+        &:before {
+            position: absolute;
+            content: "";
+            width: 100px;
+            height: 1px;
+            background-color: black;
+            top: -25px;
+            left: 275px;
+        }
+    }
+
+    &__info {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__details {
+        font-size: 18px;
+        color: $textColor;
+        font-family: $secondaryMainFont;
+        font-weight: 300;
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        & .details {
+            position: relative;
+            margin-bottom: 40px;
+
+            &:before {
+                position: absolute;
+                content: "";
+                width: 15px;
+                height: 15px;
+                left: -20px;
+                top: -5px;
+            }
+        }
+        &-address:before {
+            background: url("../images/marker.svg") no-repeat;
+        }
+        &-phone:before {
+            background: url("../images/phone.svg") no-repeat;
+        }
+        &-email:before {
+            background: url("../images/mail.svg") no-repeat;
+        }
+        &-clock:before {
+            background: url("../images/clock.svg") no-repeat;
+        }
+    }
+
+    &__form {
+        &-input {
+            width: 310px;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border: none;
+            border-bottom: 1px solid rgba(44, 64, 88, 0.06);
+            outline: none;
+
+            &:focus {
+                border-bottom: 1px solid rgb(44, 64, 88);
+            }
+        }
+
+        &-submit {
+            cursor: pointer;
+            text-transform: uppercase;
+            text-align: center;
+            font-size: 14px;
+            width: 140px;
+            height: 50px;
+            border: 1px solid $textColor;
+            background: transparent;
+
+            &:hover {
+                background-color: $buttonHoverColor;
+                color: $headerColor;
+                border: $headerColor;
+                border-radius: 5px;
+            }
+        }
+    }
+}
