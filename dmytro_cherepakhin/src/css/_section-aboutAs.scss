@@ -1,0 +1,116 @@
+.aboutAs {
+    @include bgCover('../images/simpleAndModern_bg.png');
+    text-transform: uppercase;
+    color: white;
+    padding-top: 117px;
+    padding-bottom: 34px;
+}
+
+.aboutAs__container {
+    position: relative;
+}
+
+.slick-dots {
+    position: absolute;
+    height: 250px;
+    width: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    top: 143px;
+    right: -195px;
+
+    @media(max-width: 1600px) {
+        right: calc(50% - 25px);
+        top: 400px;
+        transform: rotate(90deg);
+    }
+
+    @media(max-width: 1200px) {
+        top: 300px;
+    }
+}
+
+.slick-dots li {
+    position: relative;
+}
+
+.slick-dots li button,
+.slick-dots li button:before {
+    @include absoluteCentering;
+    display: block;
+    padding: 0;
+    width: 9px;
+    height: 9px;
+    border: 1px solid white;
+    border-radius: 50%;
+}
+
+.slick-dots li button:before {
+    background-color: white;
+    content: '';
+    opacity: 0;
+    top: 50%;
+    left: 50%;
+}
+
+.slider_item {
+    padding-top: 200px;
+}
+
+.aboutAs__card_title {
+    font-size: 80px;
+    font-weight: 600;
+    letter-spacing: 7px;
+    text-align: center;
+    line-height: 1px;
+
+    @media(max-width: 1200px) {
+        font-size: 40px;
+        letter-spacing: 1px;
+    }
+}
+
+.aboutAs__card_slogan {
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 5.4px;
+    padding-bottom: 174px;
+}
+
+.scroll {
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    padding: 10px;
+    height: 40px;
+    width: 40px;
+    border: 1px solid white;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll_arrow {
+    display: block;
+    width: 5px;
+    height: 5px;
+    transform: rotate(45deg);
+    border-right: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.scroll:hover {
+    border: 3px solid white;
+    transition: all .1s ease-in-out;
+}
+
+.scroll:hover .scroll_arrow {
+    width: 9px;
+    height: 9px;
+    border-right: 3px solid white;
+    border-bottom: 3px solid white;
+    transition: all .1s ease-in-out;
+}

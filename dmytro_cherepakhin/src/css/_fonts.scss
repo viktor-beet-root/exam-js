@@ -1,0 +1,35 @@
+@font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+        url("../fonts/GothamBook.woff2") format("woff2"),
+        url("../fonts/GothamBook.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 500;
+    src: local(""),
+        url("../fonts/gotham-medium.woff2") format("woff2"),
+        url("../fonts/gotham-medium.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Gotham';
+    font-style: normal;
+    font-weight: 600;
+    src: local(""),
+        url("../fonts/gothambold.woff2") format("woff2"),
+        url("../fonts/gothambold.woff") format("woff");
+}
+
+@font-face {
+    font-family: 'Open sans';
+    font-style: normal;
+    font-weight: 400;
+    src: local(""),
+        url("../fonts/OpenSans-Regular.woff2") format("woff2"),
+        url("../fonts/OpenSans-Regular.woff") format("woff");
+}

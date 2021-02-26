@@ -1,0 +1,47 @@
+.gallery {
+    padding-top: 115px;
+    padding-bottom: 125px;
+
+    &__img {
+        margin: 15px -5px;
+        display: block;
+        width: 100%;
+        height: auto;
+    }
+
+    &__row {
+        padding-bottom: 20px;
+    }
+
+}
+
+.gallery .news__header {
+    display: block;
+    font-size: 44px;
+    text-transform: uppercase;
+    text-align: center;
+    position: relative;
+    color: $mainTextColor;
+    padding-bottom: 30px;
+    font-weight: 500;
+
+    &::before {
+        position: absolute;
+        content: '';
+        top: -28px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 100px;
+        height: 1px;
+        background-color: $mainTextColor;
+    }
+}
+
+.gallery_btn {
+    margin: 0 auto;
+}
+
+.gallery_link {
+    text-decoration: none;
+    color: $mainTextColor;
+}
