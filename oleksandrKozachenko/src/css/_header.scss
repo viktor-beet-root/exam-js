@@ -32,18 +32,18 @@
         padding: 0 20px;
         
             @media (max-width: $SM) {         
-            display: block;
-            width: 0;
-            visibility: hidden;
-            pointer-events: none;
-            opacity: 1;
-            position: absolute;
-            top: 20px;
-            left: 0;
-            text-align: center;
-            transform: translateY(-1000px);
-            transition: all 0.3s ease-in-out;
-            text-align: center;
+                display: block;
+                width: 0;
+                visibility: hidden;
+                pointer-events: none;
+                opacity: 1;
+                position: absolute;
+                top: 20px;
+                left: 0;
+                text-align: center;
+                transform: translateY(-1000px);
+                transition: all 0.3s ease-in-out;
+                text-align: center;
             }
 }
 
@@ -52,7 +52,7 @@
             margin-right: 70px;
 
             @media (max-width: $MD ) {
-        margin-right: 0;
+                margin-right: 0;
             }
         }  
     }
@@ -176,7 +176,6 @@
                     transform: translate(-50%, -50%);
                 }
             }
-
         }
 
         & .slick-active button {
@@ -265,10 +264,10 @@
 @media (max-width: $SM) {
     
     .navigation__checkbox:checked ~ .header__list {
-    visibility: visible;
-    pointer-events: all;
-    transform: translateY(0);
-    opacity: 1;
-    width: 100%;
+        visibility: visible;
+        pointer-events: all;
+        transform: translateY(0);
+        opacity: 1;
+        width: 100%;
     }
 }

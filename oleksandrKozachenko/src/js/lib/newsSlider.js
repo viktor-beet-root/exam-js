@@ -34,6 +34,5 @@ function newsSlider() {
       ]
     })
   }
-newsSlider();
   
   export default newsSlider;

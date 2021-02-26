@@ -7,13 +7,13 @@ import initMap from './lib/map';
 window.initMap = initMap;
 
 import headerSlider from './lib/headerSlider';
-window.headerSlider = headerSlider;
+headerSlider();
 
 import newsSlider from './lib/newsSlider';
-window.newsSlider = newsSlider;
+newsSlider();
 
 import sliderResize from './lib/sliderResize';
-window.sliderResize = sliderResize; 
+sliderResize(); 
 
 
 function scrollToElement() {

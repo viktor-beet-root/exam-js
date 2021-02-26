@@ -1,7 +1,8 @@
 import $ from 'jquery';
 import 'slick-carousel';
 
-function headerSlider(){ $('.header__slider').slick({
+function headerSlider(){
+    $('.header__slider').slick({
     vertical: true,
     dots: true,
     infinite: true,
@@ -13,6 +14,5 @@ function headerSlider(){ $('.header__slider').slick({
     autoplaySpeed: 4000,
   })
   }
-  headerSlider()
 
   export default headerSlider;

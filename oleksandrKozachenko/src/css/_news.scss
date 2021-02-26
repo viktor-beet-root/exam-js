@@ -5,7 +5,7 @@
     padding: 140px 0;
 
     @media (max-width: $LG ) {
-        padding: 70px;
+            padding: 70px;
          }
     
     &__navigation {
@@ -14,7 +14,7 @@
         cursor: pointer;
 
         @media (max-width: $SM ) {
-           display: none;
+                display: none;
              }
 
         &--prev {
@@ -152,7 +152,7 @@
             margin-bottom: 30px;
             position: relative;
 
-            button{
+            button {
                 position: absolute;
                 top: 0;
                 left: 0;
@@ -164,7 +164,7 @@
                 border: none;
                 cursor: pointer;
 
-                &:before{
+                &:before {
                     content: '';
                     color:white;
                     position: absolute;

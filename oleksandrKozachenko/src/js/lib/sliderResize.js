@@ -8,6 +8,5 @@ function sliderResize() {
   }
 });
 }
-sliderResize()
 
 export default sliderResize;
