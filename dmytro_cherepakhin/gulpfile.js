@@ -1,5 +1,4 @@
-'use strict'
-var gulp = require('gulp'),
+const gulp = require('gulp'),
     watch = require('gulp-watch'),
     autoprefixer = require('gulp-autoprefixer'),
     sass = require('gulp-sass'),
@@ -10,32 +9,65 @@ var gulp = require('gulp'),
     browserSync = require('browser-sync'),
     reload = browserSync.reload,
     babel = require('gulp-babel'),
-    minify = require('gulp-minify');
+    minify = require('gulp-minify'),
+    webpack = require('webpack-stream');
 
-var path = {
+const buildFolderName = './build/',
+    srcFolderName = './src/';
+
+const path = {
     build: {
-        html: './build/',
-        js: './build/js/',
-        css: './build/css/',
-        images: './build/images/',
-        // fonts: './build/css/fonts/',
-        fonts: './build/fonts/'
+        html: buildFolderName,
+        js: buildFolderName + 'js/',
+        css: buildFolderName + 'css/',
+        images: buildFolderName + 'images/',
+        fonts: buildFolderName + 'css/fonts/',
     },
     src: {
-        html: './src/[^_]*.html',
-        js: './src/js/**/*.js',
-        css: './src/css/**/*.{scss,css}',
-        images: './src/images/**',
-        // fonts: './src/css/fonts/**'
-        fonts: './src/fonts/**'
+        html: srcFolderName + '[^_]*.html',
+        js: srcFolderName + 'js/**/*.js',
+        css: srcFolderName + 'css/**/*.{scss,css}',
+        images: srcFolderName + 'images/**',
+        fonts: srcFolderName + 'fonts/**',
     },
     watch: {
-        html: './src/**/*.html',
-        js: './src/js/**/*.js',
-        images: './src/im/**/*.{png,jpg,svg,gif}',
-        css: './src/css/**/*.{scss,css}'
+        html: srcFolderName + '**/*.html',
+        js: srcFolderName + 'js/**/*.js',
+        images: srcFolderName + 'images/**/*.{png,jpg,svg,gif}',
+        css: srcFolderName + 'css/**/*.{scss,css}',
+        fonts: srcFolderName + 'fonts/**'
     },
-    clean: './build'
+    clean: buildFolderName
+};
+
+// const isDev = true;
+const isDev = false;
+
+const webpackConfig = {
+    mode: isDev ? 'development' : 'production',
+    output: {
+        filename: 'script.js'
+    },
+    watch: false,
+    devtool: isDev ? 'source-map' : 'none',
+    module: {
+        rules: [{
+            test: /\.m?js$/,
+            exclude: /(node_modules|bower_components)/,
+            use: {
+                loader: 'babel-loader',
+                options: {
+                    presets: [
+                        ['@babel/preset-env', {
+                            debug: isDev,
+                            corejs: 3,
+                            useBuiltIns: "usage"
+                        }]
+                    ]
+                }
+            }
+        }]
+    }
 };
 
 gulp.task("webserver", function () {
@@ -75,50 +107,11 @@ gulp.task("fonts:build", function () {
 
 gulp.task("js:build", function () {
     return gulp.src(path.src.js)
-        .pipe(sourceMaps.init())
-        .pipe(sourceMaps.write())
-        .pipe(babel({
-            presets: ['@babel/preset-env']
-        }))
-        .pipe(minify({
-            ext: {
-                src: '-debug.js',
-                min: '.min.js'
-            },
-            exclude: ['lib'],
-            ignoreFiles: ['.combo.js', '-min.js', 'lib.js']
-        }))
+        .pipe(webpack(webpackConfig))
         .pipe(gulp.dest(path.build.js))
         .pipe(reload({
             stream: true
         }));
-});
-
-gulp.task("js:prod", function () {
-    return gulp.src(path.src.js)
-        .pipe(babel({
-            presets: ['@babel/preset-env']
-        }))
-        .pipe(minify({
-            ext: {
-                src: '-debug.js',
-                min: '.min.js'
-            },
-            exclude: ['lib'],
-            ignoreFiles: ['.combo.js', '-min.js', 'lib.js']
-        }))
-        .pipe(gulp.dest(path.build.js));
-});
-
-gulp.task("style:prod", function () {
-    return gulp.src(path.src.css)
-        .pipe(sass())
-        .pipe(autoprefixer({
-            browsers: ['last 2 versions'],
-            cascade: false
-        }))
-        .pipe(cssmin())
-        .pipe(gulp.dest(path.build.css));
 });
 
 gulp.task("style:build", function () {
@@ -145,19 +138,12 @@ gulp.task("build", gulp.parallel(
     'fonts:build'
 ));
 
-gulp.task("buildProd", gulp.parallel(
-    'html:build',
-    'js:prod',
-    'style:prod',
-    'images:build',
-    'fonts:build'
-));
-
 gulp.task("watch", function () {
     watch([path.watch.js], gulp.parallel('js:build'));
     watch([path.watch.html], gulp.parallel('html:build'));
     watch([path.watch.css], gulp.parallel('style:build'));
-    watch([path.watch.images], gulp.parallel('images:build'))
+    watch([path.watch.images], gulp.parallel('images:build'));
+    watch([path.watch.fonts], gulp.parallel('fonts:build'));
 });
 
 gulp.task("clean", function (callback) {
@@ -166,4 +152,4 @@ gulp.task("clean", function (callback) {
 
 gulp.task('default', gulp.parallel('build', 'webserver', 'watch'));
 
-gulp.task('prod', gulp.series('clean', gulp.parallel('buildProd')));
+gulp.task('prod', gulp.series('clean', gulp.parallel('build')));

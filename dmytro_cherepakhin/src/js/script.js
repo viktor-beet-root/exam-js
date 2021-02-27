@@ -1,9 +1,6 @@
 import $ from 'jquery';
 import 'slick-carousel';
 
-console.log($)
-
-
 $('.aboutAs_slider').slick({
     arrows: false,
     dots: true,
@@ -35,19 +32,19 @@ $('.news__slider').slick({
     ]
 });
 
-function initMap() {
-    const uluru = {
+window.initMap = function () {
+    const coord = {
         lat: 50.0886,
         lng: 36.25930
     };
     const map = new google.maps.Map(document.getElementById("map"), {
-        center: uluru,
+        center: coord,
         zoom: 10,
     });
     const image = "../images/marker.png";
     const marker = new google.maps.Marker({
-        position: uluru,
-        map,
+        position: coord,
+        map: map,
         title: "We are here :)",
     });
 };
