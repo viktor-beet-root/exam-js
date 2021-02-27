@@ -116,14 +116,14 @@ gulp.task("js:build", function () {
 
 gulp.task("style:build", function () {
     return gulp.src(path.src.css)
-        .pipe(sourceMaps.init())
+        // .pipe(sourceMaps.init())
         .pipe(sass())
         .pipe(autoprefixer({
             browsers: ['last 2 versions'],
             cascade: false
         }))
         .pipe(cssmin())
-        .pipe(sourceMaps.write())
+        // .pipe(sourceMaps.write())
         .pipe(gulp.dest(path.build.css))
         .pipe(reload({
             stream: true
