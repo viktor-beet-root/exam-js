@@ -1,0 +1,16 @@
+.social {
+    display: flex;
+    width: 160px;
+    justify-content: space-between;
+    &__link {
+        width: 38px;
+        height: 38px;
+        border: $scrollBorder;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+    }
+
+    &__svg {
+    }
+}

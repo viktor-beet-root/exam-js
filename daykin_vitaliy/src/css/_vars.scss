@@ -1,0 +1,40 @@
+$defaultFont: "Open Sans";
+$secondaryFont: "Gotham";
+
+$defaultPath: "../fonts/open-sans-v18-latin-regular";
+$defaultPathBold: "../fonts/HomepageBaukasten-Bold";
+$defaultPathMedeum: "../fonts/gotham-medium-webfont";
+$secondaryPath: "../fonts/HomepageBaukasten-Book";
+$secondaryPathItalc: "../fonts/open-sans-v18-latin-italic";
+
+$follBak: Arial, Helvetica, sans-serif;
+$defaultFonts: $defaultFont, $follBak;
+$secondaryFonts: $secondaryFont, $follBak;
+
+// цвета
+$white: #fff;
+$lightGray: #a1a1a1;
+$pickledBluewood: #2c4058;
+$riverBed: #4b5562;
+$malibu: #55b7ff;
+$heliotrope: #7e5aff;
+
+$defaultFontSize: 18px;
+$defaultFontWeight: 400;
+$defaultFontColor: $white;
+$defaultLineHeight: 1.625;
+$defaultColorBg: $lightGray;
+
+$textColor: $riverBed;
+$menuColor: $white;
+$titleFontWeight: 500;
+$titleFontSize: 44px;
+$subtitleFontSize: 22px;
+$subtitleColor: $pickledBluewood;
+$menuFontSize: 14px;
+$h1FontSize: 80px;
+$h2FontSize: 44px;
+$scrollBorder: 1px solid $menuColor;
+$buttonBorder: 1px solid $pickledBluewood;
+$lineBgColor: $pickledBluewood;
+$h4FontSize: 22px;
