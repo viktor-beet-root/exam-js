@@ -1,0 +1,152 @@
+.contact {
+    @include bgCover("../image/footer.jpg");
+    max-width: 1600px;
+    min-height: 520px;
+
+    &__wrapper {
+        margin: 0 auto;
+        max-width: 770px;
+    }
+
+    &__modal {
+        max-width: 100%;
+        border: none;
+        @include bgCover("../image/contact.jpg");
+        margin-top: -300px;
+        padding: 10px 30px;
+        left: 50%;
+        transform: translateX(-50%);
+        position: absolute;
+        z-index: 1;
+    }
+
+    &__header {
+        padding-top: 90px;
+        display: flex;
+        justify-content: center;
+        position: relative;
+    }
+
+    &__title {
+        font-size: 44px;
+        text-transform: uppercase;
+        color: $mainTextColor;
+        font-weight: 500;
+        letter-spacing: 2px;
+
+        &::after {
+            content: "";
+            background: $mainTextColor;
+            position: absolute;
+            top: 40%;
+            left: 43%;
+            height: 2px;
+            width: 104px;
+        }
+    }
+
+    &__info {
+        padding-top: 60px;
+        display: flex;
+    }
+
+    &__address {
+        padding-right: 40px;
+    }
+
+    &__text {
+        font-size: 18px;
+        padding-bottom: 30px;
+        padding-left: 30px;
+        color: $mainTextColor;
+        position: relative;
+    }
+
+    &__img1::before,
+    &__img2::before,
+    &__img3::before,
+    &__img4::before {
+        position: absolute;
+        content: "";
+        width: 20px;
+        left: 1px;
+        height: 20px;
+    }
+
+    &__img1::before {
+        background: url("../image/marker.svg");
+        background-repeat: no-repeat;
+    }
+
+    &__img2::before {
+        background: url("../image/phone.svg");
+        background-repeat: no-repeat;
+    }
+
+    &__img3::before {
+        background: url("../image/mail.svg");
+        background-repeat: no-repeat;
+    }
+
+    &__img4::before {
+        background: url("../image/clock.svg");
+        background-repeat: no-repeat;
+    }
+
+    &__form {
+        border: none;
+        display: flex;
+        flex-direction: column;
+    }
+
+    &__input {
+        width: 300px;
+        margin-bottom: 30px;
+        border: none;
+        padding-bottom: 18px;
+        border-bottom: 1px solid $defaultInputColor;
+        outline: none;
+
+        &:focus,
+        &:hover {
+            border-bottom: 1px solid $mainTextColor;
+        }
+    }
+
+    &__button {
+        background: transparent;
+        width: 140px;
+        height: 50px;
+        margin-left: 160px;
+
+        &:hover {
+            color: $secondaryTextColor;
+        }
+    }
+
+    &__address {
+        @media screen and (max-width: $SM) {
+            display: none;
+        }
+    }
+
+    &__footer {
+        padding-top: 200px;
+    }
+
+    &__about {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__logo {
+        padding-left: 30px;
+    }
+
+    &__author {
+        padding-left: 30px;
+        padding-top: 40px;
+        font-size: 14px;
+        color: $secondaryTextColor;
+    }
+}

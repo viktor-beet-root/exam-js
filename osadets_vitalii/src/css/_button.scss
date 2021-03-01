@@ -1,0 +1,28 @@
+.button {
+    display: block;
+    text-decoration: none;
+    width: 190px;
+    height: 50px;
+    border: $buttonBorder;
+    overflow: hidden;
+
+    &:hover {
+        background: $mainTextColor;
+
+        .button__text {
+            color: $secondaryTextColor;
+        }
+    }
+
+    &_center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__text {
+        font-family: $mainFont;
+        text-transform: uppercase;
+        color: $mainTextColor;
+    }
+}
