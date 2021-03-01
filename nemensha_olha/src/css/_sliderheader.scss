@@ -1,0 +1,58 @@
+.slick-dots li button {
+    border: solid 1px $dots;
+    border-radius: 50%;
+    height: 7px;
+    width: 7px;
+    margin: 20px;
+    outline: none;
+}
+
+.slick-dots li button:before {
+    content: '';
+}
+
+.slick-dots li.slick-active button {
+    background-color: $dots;
+}
+
+.main_block .slick-dots {
+    position: absolute;
+    right: -1327px;
+    @media (max-width: 1200px) {
+        right: -1000px;
+    }
+    @media (max-width: 992px) {
+        display: inline-block;
+        transform: translateX(-50%);
+        left: 50%;
+        bottom: -100px;
+    }
+}
+
+.main_block .slick-dots li {
+    display: block;
+    @media (max-width: 992px) {
+        display: inline-block;
+    }
+}
+
+.main_block .slick-dots li button {
+    border: solid 1px$dots;
+    border-radius: 50%;
+    height: 7px;
+    width: 7px;
+    margin: 20px;
+    outline: none;
+}
+
+.main_block .slick-dots li button:before {
+    content: '';
+}
+
+.main_block .slick-dots li.slick-active button {
+    background-color: $dots;
+}
+
+.main_block .slick-list {
+    max-width: 1170px;
+}

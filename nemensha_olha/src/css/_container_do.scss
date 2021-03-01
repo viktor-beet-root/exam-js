@@ -1,0 +1,231 @@
+    .container_do,
+    .container_int {
+        position: relative;
+        padding-bottom: 135px;
+        @media (max-width: 1200px) {
+            padding-bottom: 100px;
+            margin: 0 auto;
+        }
+        @media (max-width: 992px) {
+            padding-bottom: 50px;
+            margin: 0 auto;
+        }
+        @media (max-width: 768px) {
+            padding-bottom: 40px;
+            margin: 0 auto;
+        }
+        @media (max-width: 576px) {
+            padding-bottom: 10px;
+            margin: 0 auto;
+        }
+    }
+    
+    .container__item_line {
+        color: $itemColor;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 22px;
+        text-align: center;
+        text-transform: uppercase;
+        padding: 135px 0 85px;
+        margin-bottom: 85px;
+        @media (max-width: 1200px) {
+            font-size: 40px;
+            padding: 100px 0 65px;
+            margin-bottom: 55px;
+        }
+        @media (max-width: 992px) {
+            font-size: 35px;
+            padding: 90px 0 45px;
+            margin-bottom: 0px;
+        }
+        @media (max-width: 768px) {
+            font-size: 30px;
+            padding: 70px 0 35px;
+            margin-bottom: 0px;
+        }
+        @media (max-width: 576px) {
+            font-size: 25px;
+            padding: 50px 0 25px;
+            margin-bottom: 0px;
+        }
+    }
+    
+    .line {
+        content: "";
+        width: 100px;
+        height: 1px;
+        background-color: $lineColorCello;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        top: 100px;
+        @media (max-width: 1200px) {
+            top: 80px;
+        }
+        @media (max-width: 992px) {
+            display: none;
+        }
+        @media (max-width: 768px) {
+            display: none;
+        }
+        @media (max-width: 576px) {
+            display: none;
+        }
+    }
+    
+    .container_do__item {
+        text-transform: uppercase;
+        padding-top: 55px;
+        padding-bottom: 20px;
+        font-size: 22px;
+        font-weight: 400;
+        color: $itemColor;
+        @media (max-width: 1200px) {
+            font-size: 20px;
+        }
+        @media (max-width: 992px) {
+            font-size: 18px;
+        }
+        @media (max-width: 768px) {
+            font-size: 16px;
+        }
+        @media (max-width: 576px) {
+            font-size: 14px;
+        }
+    }
+    
+    .container_do__img,
+    .container_int__img {
+        position: relative;
+    }
+    
+    .cube_blue {
+        width: 585px;
+        height: 470px;
+        background-color: $cubeBlue;
+        position: absolute;
+        top: -75px;
+        left: -230px;
+        z-index: 1;
+        @media (max-width: 1200px) {
+            width: 400px;
+            display: none;
+        }
+    }
+    
+    .cube_fiolet {
+        width: 585px;
+        height: 470px;
+        background-color: $cubeFiolet;
+        position: absolute;
+        top: -75px;
+        right: -230px;
+        z-index: 1;
+        @media (max-width: 1200px) {
+            display: none;
+        }
+    }
+    
+    .container__image {
+        display: block;
+        width: 100%;
+        z-index: 10;
+        position: relative;
+    }
+    
+    .container__item {
+        color: $itemColor;
+        font-size: 44px;
+        font-weight: 700;
+        line-height: 22px;
+        text-transform: uppercase;
+        padding-bottom: 39px;
+        @media (max-width: 1200px) {
+            font-size: 33px;
+        }
+        @media (max-width: 992px) {
+            font-size: 28px;
+            padding-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            font-size: 25px;
+            padding-bottom: 25px;
+        }
+        @media (max-width: 576px) {
+            font-size: 20px;
+            padding-bottom: 20px;
+        }
+    }
+    
+    .container__text {
+        max-width: 460px;
+        color: $colotText;
+        font-family: $secondary-fonts;
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: left;
+        padding-bottom: 36px;
+        @media (max-width: 1200px) {
+            font-size: 16px;
+        }
+        @media (max-width: 992px) {
+            font-size: 14px;
+            padding-bottom: 30px;
+        }
+        @media (max-width: 768px) {
+            font-size: 12px;
+            padding-bottom: 25px;
+        }
+        @media (max-width: 576px) {
+            font-size: 10px;
+            padding-bottom: 20px;
+        }
+    }
+    
+    .marker {
+        fill: $markerColor;
+        width: 14px;
+        height: 16px;
+    }
+    
+    .conteiner__geo {
+        padding-top: 60px;
+        display: flex;
+        align-items: center;
+        @media (max-width: 1200px) {
+            padding-top: 50px;
+        }
+        @media (max-width: 992px) {
+            padding-top: 40px;
+        }
+        @media (max-width: 768px) {
+            padding-top: 30px;
+        }
+        @media (max-width: 576px) {
+            padding-top: 20px;
+        }
+    }
+    
+    .text__geo {
+        padding-left: 5px;
+        color: $itemColor;
+        font-family: $secondary-fonts;
+        font-size: 18px;
+        font-style: italic;
+        line-height: 30px;
+        text-align: left;
+        @media (max-width: 1200px) {
+            font-size: 16px;
+        }
+        @media (max-width: 992px) {
+            font-size: 14px;
+        }
+        @media (max-width: 768px) {
+            font-size: 12px;
+        }
+        @media (max-width: 576px) {
+            font-size: 10px;
+        }
+    }
