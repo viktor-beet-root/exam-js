@@ -1,0 +1,67 @@
+.projects {
+    background-color: $color-white;
+    margin-top: -270px;
+
+    &__item {
+        display: flex;
+        margin-bottom: 140px;
+        padding: 70px 0;
+
+        @media (max-width: $LG ) {
+                margin-bottom: 20px;
+                padding: 20px 0;
+             }
+    }
+
+    &__wrapper_img {
+        width: 50%;
+    }
+
+    &__image {
+        display: block;
+        box-sizing: content-box;
+        width: 100%;
+        
+        &--left {
+            box-shadow: -250px -70px $color-bg-first;
+        }
+
+        &--right {
+            box-shadow: 250px -70px $color-bg-second;
+        }
+
+    }
+
+    &__about {
+        padding: 60px 0;
+
+        &_label {
+            font-size: 22px;
+            font-weight: 300;
+            text-transform: uppercase;
+        }
+
+        &_heading {
+            font-size: 44px;
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+
+        &_text {
+            margin: 30px 0;
+            font-family: $secondary-fonts-name;
+            line-height: 1.66;
+        }
+
+        &_description {
+            margin-top: 60px;
+            font-family: $secondary-fonts-name;
+            font-style: italic;
+        }
+
+        &_location {
+            height: 16px;
+        }
+    }
+}
+

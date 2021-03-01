@@ -1,0 +1,35 @@
+.btn {
+    display: inline-block;
+    text-transform: uppercase;
+    padding: 20px 40px;
+    font-size: 14px;
+    font-family: $default-fonts-name;
+    color: $color-primary;
+    border: 1px solid $color-primary;
+    cursor: pointer;
+    transition: .2s all ease;
+
+    &:hover {
+        border-color: $color-bg-first;
+        color: $color-bg-first;
+        box-shadow: 5px 5px 6px 0px rgba($color-bg-first, 0.2);
+        transform: scale(1.03);
+    }
+
+    &:active {
+        transform: scale(1) translateY(1px);
+    }
+
+    @media (max-width: $SM ) {
+        padding: 15px 20px;
+        font-size: $small-font-size;
+        }
+}
+
+.round-link {
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    border: 1px solid $color-white;
+    border-radius: 50%;
+}
