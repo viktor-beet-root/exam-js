@@ -1,0 +1,39 @@
+.main-title {
+    margin-top: -110px;
+    padding: 250px 0 112px 0;
+    background-image: url(../image/slider-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+    &_centr {
+        text-align: center;
+    }
+    &__subtitle {
+        color: $menuColor;
+        padding-bottom: 250px;
+    }
+}
+
+.scroll {
+    &__item {
+        width: 38px;
+        height: 38px;
+        border: 1px solid $menuColor;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        align-items: center;
+
+        &::after {
+            width: 7px;
+            height: 7px;
+            border-left: $scrollBorder;
+            border-bottom: $scrollBorder;
+            content: "";
+            display: block;
+            transform: rotate(-45deg);
+        }
+    }
+}

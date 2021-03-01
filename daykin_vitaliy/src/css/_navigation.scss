@@ -1,0 +1,53 @@
+.navigation {
+    &__list {
+        border: 1px solid #000;
+        width: 770px;
+        height: 450px;
+        background-image: url(../image/bgForm.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        padding: 0 60px;
+        &__geo {
+        }
+    }
+
+    &__title {
+        padding: 60px 0 60px 0;
+        margin: 0 auto;
+        &::before {
+            margin-bottom: 10px;
+        }
+    }
+
+    &__content {
+        display: flex;
+    }
+
+    &__info {
+    }
+
+    &form {
+        display: flex;
+    }
+}
+.fa-map-marker-alt,
+.fa-clock,
+.fa-phone-alt,
+.fa-inbox {
+    display: block;
+    margin-right: 10px;
+    color: $heliotrope;
+}
+.name,
+.email {
+    font-size: $defaultFontSize;
+    font-family: $secondaryFonts;
+    color: $pickledBluewood;
+    display: block;
+    border: none;
+    border-bottom: 1px solid $pickledBluewood;
+    width: 310px;
+}
+.navigation__form_email {
+    opacity: 0.5;
+}

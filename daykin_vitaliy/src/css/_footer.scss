@@ -1,0 +1,48 @@
+.footer {
+    padding: 200px;
+    background-image: url(../image/bgFooter.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.footer-bloc {
+    max-width: 770px;
+    display: flex;
+    justify-content: space-between;
+
+    &__p {
+        padding-top: 30px;
+    }
+}
+
+.text_p {
+    font-family: $secondaryFonts;
+    font-size: $menuFontSize;
+    font-weight: 400;
+    color: $menuColor;
+
+    &_right {
+        padding-right: 20px;
+    }
+
+    &_line {
+        position: relative;
+        padding-left: 20px;
+        &::before {
+            content: "";
+            position: absolute;
+            width: 1px;
+            height: 20px;
+            opacity: 0.5;
+            background-color: #ffffff;
+            left: 0px;
+            top: 0px;
+        }
+    }
+}
+
+.fa-heart {
+    color: $menuColor;
+    font-size: $menuFontSize;
+    display: block;
+    padding: 0 5px;
+}
